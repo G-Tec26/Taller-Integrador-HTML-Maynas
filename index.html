@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>+ChicasTec | Programa Formativo &amp; Portafolio de 30 Creadoras</title>
+  <meta name="description" content="Landing page del programa formativo +ChicasTec. Conoce a las 30 jóvenes talentos y sus trabajos de página personal y portafolios web." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#1b365d',
+              primary: '#1b365d',
+              dark: '#0f233d',
+              deep: '#091729',
+              light: '#f0f4f9',
+              surface: '#244472',
+              border: '#cbd5e1'
+            },
+            palorosa: {
+              DEFAULT: '#b76e79',
+              hover: '#a25c67',
+              dark: '#8e4c56',
+              light: '#f9eff1',
+              border: '#e6c5cb',
+              accent: '#c9848f'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Personalizados: Armonía Elegante Azul Marino & Palo Rosa -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#f8fafc] text-slate-800 min-h-screen relative overflow-x-hidden selection:bg-[#b76e79] selection:text-white">
+
+  <!-- Fondos Atmosféricos Suaves para Modo Claro -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[550px] bg-light-radial pointer-events-none -z-10"></div>
+  <div class="fixed top-1/4 -left-40 w-96 h-96 bg-[#1b365d]/5 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-soft"></div>
+  <div class="fixed top-2/3 -right-40 w-96 h-96 bg-[#b76e79]/5 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-soft"></div>
+
+  <!-- ========================================================================
+       BARRA DE NAVEGACIÓN (Header Distintivo Azul Marino con Acento Palo Rosa)
+       ======================================================================== -->
+  <header class="sticky top-0 z-40 distinctive-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Marca +ChicasTec Distintiva -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-white/15 p-0.5 flex items-center justify-center backdrop-blur-md border border-white/25 shadow-md group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center shadow-inner">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1b365d] to-[#b76e79] font-black text-xl font-heading">+</span>
+            <i class="fa-solid fa-code text-[#b76e79] text-xs ml-0.5"></i>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-black tracking-tight font-heading text-white">
+              <span class="text-[#c9848f]">+</span>Chicas<span class="text-slate-200">Tec</span>
+            </span>
+            <span class="text-[10px] px-2.5 py-0.5 rounded-full font-bold bg-[#b76e79] text-white shadow-sm uppercase tracking-wider">
+              Taller Integrador
+            </span>
+          </div>
+          <span class="text-[11px] text-slate-300 block -mt-1 font-medium">Programa de Formación STEAM &amp; Liderazgo</span>
+        </div>
+      </a>
+
+      <!-- Menú Desktop -->
+      <nav class="hidden md:flex items-center gap-2 text-sm font-semibold">
+        <a href="#inicio" class="nav-link-distinctive">Inicio</a>
+        <a href="#programa" class="nav-link-distinctive">El Programa</a>
+        <a href="#pilares" class="nav-link-distinctive">Pilares</a>
+        <a href="#catalogo" class="nav-link-distinctive flex items-center gap-1.5 text-rose-200 hover:text-white">
+          <span>30 Creadoras</span>
+          <span class="w-2 h-2 rounded-full bg-[#b76e79] animate-ping"></span>
+        </a>
+        <a href="#colaboradores" class="nav-link-distinctive">Aliados</a>
+      </nav>
+
+      <!-- Botón CTA con Palo Rosa Distintivo -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#catalogo" class="btn-rose-gradient px-5 py-2.5 rounded-xl text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-lg">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>Explorar Portafolios</span>
+        </a>
+      </div>
+
+      <!-- Botón Menú Móvil -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-white/15 text-white hover:bg-white/25 border border-white/20" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Menú Móvil Desplegable -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#0f233d] border-b-2 border-[#b76e79] px-6 py-5 space-y-3 shadow-xl text-white">
+      <a href="#inicio" class="block text-slate-200 hover:text-white font-medium py-1">Inicio</a>
+      <a href="#programa" class="block text-slate-200 hover:text-white font-medium py-1">El Programa Formativo</a>
+      <a href="#pilares" class="block text-slate-200 hover:text-white font-medium py-1">Pilares Formativos</a>
+      <a href="#catalogo" class="block text-rose-300 font-semibold py-1">Conocer a las 30 Señoritas (Portafolios)</a>
+      <a href="#colaboradores" class="block text-slate-200 hover:text-white font-medium py-1">Organizaciones Aliadas</a>
+      <a href="#catalogo" class="w-full btn-rose-gradient text-center block py-2.5 rounded-xl text-xs font-bold uppercase text-white mt-2">
+        Ver las 30 Creadoras
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SECCIÓN HERO (Fondo Claro, Alto Contraste y Armonía Cromática)
+       ======================================================================== -->
+  <section id="inicio" class="pt-12 pb-20 md:pt-18 md:pb-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-6">
+        
+        <!-- Insignia Superior -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f0f4f9] border border-[#cbd5e1] text-[#1b365d] text-xs font-semibold shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#b76e79] animate-pulse"></span>
+          <span>Talento Femenino en Tecnología • Taller Integrador 2024</span>
+          <i class="fa-solid fa-wand-magic-sparkles text-[#b76e79] text-xs ml-0.5"></i>
+        </div>
+
+        <!-- Título Principal -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-[1.15] text-slate-900">
+          El futuro digital lo escriben ellas: <br class="hidden sm:inline" />
+          <span class="text-gradient">Programa Formativo +ChicasTec</span>
+        </h1>
+
+        <!-- Subtítulo / Descripción -->
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          Un espacio formativo de aprendizaje práctico donde <strong>30 jóvenes creadoras</strong> aprendieron a programar interfaces web, diseñaron sus páginas personales y desarrollaron proyectos con impacto social.
+        </p>
+
+        <!-- Botones de Acción -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#catalogo" class="w-full sm:w-auto btn-primary-gradient px-8 py-3.5 rounded-xl text-white font-bold text-sm tracking-wide flex items-center justify-center gap-3">
+            <i class="fa-solid fa-address-card text-base"></i>
+            <span>Conocer a las 30 Señoritas &amp; sus Webs</span>
+          </a>
+          <a href="#programa" class="w-full sm:w-auto btn-secondary-light px-7 py-3.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-[#1b365d]"></i>
+            <span>Sobre el Programa</span>
+          </a>
+        </div>
+
+        <!-- Estadísticas Clave en Tarjetas Claras -->
+        <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div class="glass-card p-4 rounded-2xl text-center">
+            <div class="text-3xl sm:text-4xl font-black text-[#1b365d] font-heading">30</div>
+            <div class="text-xs text-slate-600 font-semibold mt-1">Jóvenes Creadoras</div>
+          </div>
+          <div class="glass-card p-4 rounded-2xl text-center">
+            <div class="text-3xl sm:text-4xl font-black text-[#b76e79] font-heading">140+</div>
+            <div class="text-xs text-slate-600 font-semibold mt-1">Horas de Formación</div>
+          </div>
+          <div class="glass-card p-4 rounded-2xl text-center">
+            <div class="text-3xl sm:text-4xl font-black text-[#244472] font-heading">100%</div>
+            <div class="text-xs text-slate-600 font-semibold mt-1">Páginas Personales</div>
+          </div>
+          <div class="glass-card p-4 rounded-2xl text-center">
+            <div class="text-3xl sm:text-4xl font-black text-[#8e4c56] font-heading">12</div>
+            <div class="text-xs text-slate-600 font-semibold mt-1">Ciudades del Perú</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN SOBRE EL PROGRAMA
+       ======================================================================== -->
+  <section id="programa" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Texto explicativo -->
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#f9eff1] border border-[#e6c5cb] text-[#8e4c56] text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-bullseye"></i> Nuestra Misión
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-slate-900 leading-tight">
+            Cerrando la brecha de género a través del <span class="text-gradient">código y la mentoría</span>
+          </h2>
+
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            El programa formativo <strong>+ChicasTec</strong> promueve el acceso, permanencia y liderazgo de mujeres jóvenes en carreras STEAM. En este <em>Taller Integrador</em>, las participantes desarrollaron competencias técnicas en frontend y diseñaron interfaces web accesibles y funcionales.
+          </p>
+
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            Como trabajo final y demostración de competencias, cada una de las <strong>30 señoritas</strong> construyó su propia <strong>página personal y portafolio interactivo</strong>, reflejando su identidad, sus intereses y su visión de futuro.
+          </p>
+
+          <!-- Lista de Logros del Taller -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-[#f0f4f9] text-[#1b365d] border border-[#cbd5e1] flex items-center justify-center text-xs mt-0.5 shrink-0">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-sm text-slate-700">
+                <strong class="text-slate-900">Desarrollo Web Frontend:</strong> HTML5 semántico, maquetación moderna con CSS Grid, Flexbox y programación interactiva en JavaScript.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-[#f9eff1] text-[#b76e79] border border-[#e6c5cb] flex items-center justify-center text-xs mt-0.5 shrink-0">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-sm text-slate-700">
+                <strong class="text-slate-900">Diseño UI/UX con Figma:</strong> Arquitectura de información, wireframes interactivos y estándares de accesibilidad digital WCAG.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-[#f0f4f9] text-[#244472] border border-[#cbd5e1] flex items-center justify-center text-xs mt-0.5 shrink-0">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-sm text-slate-700">
+                <strong class="text-slate-900">Git, GitHub &amp; Publicación:</strong> Control de versiones profesional y publicación de proyectos en servidores en la nube.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta Visual / Showcase del Bootcamp -->
+        <div class="relative">
+          <div class="relative glass-card p-8 rounded-3xl border border-slate-200 bg-white shadow-lg space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#1b365d] to-[#b76e79] flex items-center justify-center text-white shadow-md">
+                  <i class="fa-solid fa-code-commit"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Ruta de Aprendizaje Integrador</h4>
+                  <p class="text-xs text-slate-500">De los fundamentos al portafolio publicado</p>
+                </div>
+              </div>
+              <span class="status-pill">
+                <span class="status-dot"></span> 30 Proyectos
+              </span>
+            </div>
+
+            <!-- Pasos del Viaje -->
+            <div class="space-y-3.5">
+              <div class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                <span class="w-8 h-8 rounded-lg bg-[#f0f4f9] text-[#1b365d] border border-[#cbd5e1] font-bold text-xs flex items-center justify-center shrink-0">01</span>
+                <div>
+                  <h5 class="text-xs font-bold text-slate-900">Fundamentos Semánticos &amp; CSS Moderno</h5>
+                  <p class="text-[11px] text-slate-500">Estructuración accesible con HTML5, Tailwind CSS y maquetación adaptable</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                <span class="w-8 h-8 rounded-lg bg-[#f9eff1] text-[#b76e79] border border-[#e6c5cb] font-bold text-xs flex items-center justify-center shrink-0">02</span>
+                <div>
+                  <h5 class="text-xs font-bold text-slate-900">Lógica &amp; Dinamismo con JavaScript</h5>
+                  <p class="text-[11px] text-slate-500">Manipulación del DOM, filtros dinámicos, eventos y consumo de datos</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                <span class="w-8 h-8 rounded-lg bg-[#f0f4f9] text-[#244472] border border-[#cbd5e1] font-bold text-xs flex items-center justify-center shrink-0">03</span>
+                <div>
+                  <h5 class="text-xs font-bold text-slate-900">Página Personal &amp; Portafolio Integrador</h5>
+                  <p class="text-[11px] text-slate-500">30 propuestas digitales únicas publicadas con identidad propia</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-[#f0f4f9] to-[#f9eff1] p-4 rounded-xl border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
+              <span class="flex items-center gap-2 font-medium">
+                <i class="fa-solid fa-heart text-[#b76e79]"></i>
+                Comunidad 100% colaborativa y sorora
+              </span>
+              <a href="#catalogo" class="text-[#1b365d] font-bold hover:text-[#b76e79] transition-colors">Ver trabajos &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN PILARES FORMATIVOS
+       ======================================================================== -->
+  <section id="pilares" class="py-20 relative bg-[#f8fafc]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#f0f4f9] border border-[#cbd5e1] text-[#1b365d] text-xs font-bold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-layer-group"></i> Metodología Integral
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-slate-900">
+          Cuatro Pilares que potencian el talento
+        </h2>
+        <p class="text-slate-600 text-sm mt-3">
+          Formamos más que desarrolladoras: líderes digitales con criterio técnico, creatividad y visión de impacto.
+        </p>
+      </div>
+
+      <!-- Grid de Pilares (Inyectado por JS con estilo claro) -->
+      <div id="pillarsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Renderizado dinámicamente -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN CATÁLOGO: 30 CARDS DE LAS SEÑORITAS Y SUS PÁGINAS PERSONALES
+       ======================================================================== -->
+  <section id="catalogo" class="py-20 border-t border-slate-200 relative bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado de la Sección -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f9eff1] border border-[#e6c5cb] text-[#8e4c56] text-xs font-bold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-users text-[#b76e79]"></i> Catálogo de Graduadas
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black font-heading text-slate-900 tracking-tight">
+          Conoce a nuestras <span class="text-gradient">30 Creadoras</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
+          Cada tarjeta representa a una de las señoritas del programa formativo. Descubre su perfil y haz clic en <strong>"Conocer Trabajo &amp; Web"</strong> para explorar su página personal en vivo.
+        </p>
+      </div>
+
+      <!-- Barra de Filtros, Búsqueda y Ordenamiento -->
+      <div class="glass-panel p-5 rounded-2xl mb-8 space-y-4">
+        
+        <!-- Fila Superior: Buscador y Ordenamiento -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <!-- Input de Búsqueda -->
+          <div class="relative w-full md:w-96">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input 
+              type="text" 
+              id="searchInput" 
+              placeholder="Buscar por nombre, tecnología, ciudad o proyecto..." 
+              class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#1b365d] focus:bg-white transition-colors"
+            />
+          </div>
+
+          <!-- Ordenador, Filtro por Ciudad y Selector de Vista -->
+          <div class="flex flex-wrap items-center gap-3 w-full md:w-auto justify-end">
+            <!-- Filtro por Ciudad -->
+            <div class="flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-[#b76e79] text-xs"></i>
+              <select 
+                id="citySelect" 
+                class="bg-slate-50 border border-slate-300 rounded-xl px-2.5 py-2 text-xs sm:text-sm text-slate-700 font-medium focus:outline-none focus:border-[#1b365d]"
+              >
+                <option value="all">📍 Todas las Ciudades</option>
+                <option value="Lima">Lima</option>
+                <option value="Cusco">Cusco</option>
+                <option value="Arequipa">Arequipa</option>
+                <option value="Trujillo">Trujillo</option>
+                <option value="Piura">Piura</option>
+                <option value="Ica">Ica</option>
+                <option value="Chiclayo">Chiclayo</option>
+                <option value="Tacna">Tacna</option>
+                <option value="Chimbote">Chimbote</option>
+                <option value="Puno">Puno</option>
+                <option value="Cajamarca">Cajamarca</option>
+                <option value="Tarapoto">Tarapoto</option>
+              </select>
+            </div>
+
+            <!-- Ordenador -->
+            <div class="flex items-center gap-1.5">
+              <i class="fa-solid fa-arrow-down-short-wide text-[#1b365d] text-xs"></i>
+              <select 
+                id="sortSelect" 
+                class="bg-slate-50 border border-slate-300 rounded-xl px-2.5 py-2 text-xs sm:text-sm text-slate-700 font-medium focus:outline-none focus:border-[#1b365d]"
+              >
+                <option value="featured">✨ Proyectos Destacados</option>
+                <option value="name-asc">Nombre (A - Z)</option>
+                <option value="name-desc">Nombre (Z - A)</option>
+                <option value="likes">❤️ Más Valoradas</option>
+              </select>
+            </div>
+
+            <!-- Conmutador de Vista (Cuadrícula / Lista) -->
+            <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-300">
+              <button 
+                id="gridViewBtn" 
+                class="p-1.5 px-2.5 rounded-lg text-xs font-bold transition-all bg-white text-[#1b365d] shadow-sm"
+                title="Vista Cuadrícula de Tarjetas"
+                aria-label="Vista Cuadrícula"
+              >
+                <i class="fa-solid fa-table-cells-large"></i>
+              </button>
+              <button 
+                id="listViewBtn" 
+                class="p-1.5 px-2.5 rounded-lg text-xs font-bold transition-all text-slate-500 hover:text-slate-800"
+                title="Vista Lista / Directorio"
+                aria-label="Vista Lista"
+              >
+                <i class="fa-solid fa-list-ul"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fila Inferior: Filtros por Categoría & Contador -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-100">
+          <div class="flex flex-wrap items-center gap-2">
+            <button class="filter-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold" data-filter="all">
+              Todas (30)
+            </button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold" data-filter="frontend">
+              💻 Frontend Dev
+            </button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold" data-filter="ui-ux">
+              🎨 UI/UX &amp; Web
+            </button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold" data-filter="fullstack">
+              ⚡ Full Stack &amp; JS
+            </button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold" data-filter="impacto">
+              🌱 Impacto Social
+            </button>
+          </div>
+
+          <div id="studentsCounter" class="text-xs text-slate-500 font-medium">
+            <!-- Actualizado por JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Estado Vacío -->
+      <div id="noResults" class="hidden glass-card p-12 rounded-3xl text-center max-w-md mx-auto my-12 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-[#f0f4f9] text-[#1b365d] border border-[#cbd5e1] mx-auto flex items-center justify-center text-2xl">
+          <i class="fa-solid fa-user-slash"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">No encontramos coincidencias</h3>
+        <p class="text-xs text-slate-500">Intenta buscar con otros términos como "Cusco", "CSS" o el nombre de alguna participante.</p>
+        <button id="resetFiltersBtn" class="btn-primary-gradient px-4 py-2 rounded-xl text-xs font-bold text-white">
+          Restablecer Filtros
+        </button>
+      </div>
+
+      <!-- GRID DE LAS 30 TARJETAS (Renderizado dinámico en modo claro) -->
+      <div id="studentsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Inyectado dinámicamente con JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN TESTIMONIOS
+       ======================================================================== -->
+  <section class="py-20 border-t border-slate-200 bg-[#f8fafc]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#f0f4f9] border border-[#cbd5e1] text-[#1b365d] text-xs font-bold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-quote-left text-[#b76e79]"></i> Voces de la Comunidad
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-slate-900">
+          El impacto de apostar por el talento femenino
+        </h2>
+        <p class="text-slate-600 text-sm mt-3">
+          Testimonios de las participantes y facilitadoras en este camino de aprendizaje tecnológico.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Testimonio 1 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-[#b76e79] text-xl mb-3">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
+              "Antes de +ChicasTec pensaba que la tecnología era algo lejano. Hoy tengo mi página web funcionando y sé que puedo construir cualquier solución que imagine con código."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#1b365d] to-[#b76e79] p-0.5 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=128&q=80" alt="Valeria Gómez" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Valeria Gómez</h4>
+              <p class="text-xs text-[#1b365d] font-semibold">Participante de Lima</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-[#1b365d] text-xl mb-3">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
+              "Ver a 30 señoritas de diferentes regiones apoyándose en cada línea de código demuestra que la comunidad y la educación técnica transforman vidas."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#b76e79] to-[#1b365d] p-0.5 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=128&q=80" alt="Mentora Tech" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Ing. Rocío Cárdenas</h4>
+              <p class="text-xs text-[#8e4c56] font-semibold">Mentora Líder Frontend</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-[#b76e79] text-xl mb-3">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
+              "La accesibilidad web y el impacto social fueron el corazón de mi proyecto personal. Aprendimos a programar con empatía y propósito para resolver problemas reales."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#244472] to-[#b76e79] p-0.5 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=128&q=80" alt="Isabella Huamán" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Isabella Huamán</h4>
+              <p class="text-xs text-[#1b365d] font-semibold">Participante de Ica</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN FOOTER & COLABORADORES DEL PROYECTO (Footer Distintivo con Logos Optimizados)
+       ======================================================================== -->
+  <footer id="colaboradores" class="distinctive-footer pt-16 pb-12">
+    <!-- Luces ambientales decorativas -->
+    <div class="absolute -top-32 left-1/4 w-80 h-80 bg-[#1b365d]/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -top-32 right-1/4 w-80 h-80 bg-[#b76e79]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Vitrina de Colaboradores e Instituciones Aliadas -->
+      <div class="mb-14">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-200 text-xs font-semibold mb-3 shadow-sm">
+            <i class="fa-solid fa-handshake-angle text-[#c9848f]"></i> Alianzas Estratégicas
+          </div>
+          <h3 class="text-3xl font-black font-heading text-white">
+            Organizaciones que Impulsan el Programa
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+            Unidas por el cierre de la brecha de género, la educación tecnológica y el empoderamiento de las niñas y jóvenes en el Perú.
+          </p>
+        </div>
+
+        <!-- 3 Tarjetas Rediseñadas con Showcase Box Blanco para Nitidez Total -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          
+          <!-- Logo 1: PLAN INTERNATIONAL -->
+          <div class="collaborator-card-premium">
+            <div class="logo-showcase-box">
+              <img 
+                src="logo/PLAN%20INTERNACIONAL.png" 
+                alt="Plan International" 
+                class="collaborator-logo" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='logo/PLAN INTERNACIONAL.png';"
+              />
+            </div>
+            <div class="text-center space-y-1">
+              <h5 class="text-sm font-bold text-white font-heading">Plan International</h5>
+              <p class="text-xs text-rose-200/90">Liderazgo &amp; Derechos de las Niñas</p>
+              <span class="inline-flex text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-slate-200 border border-white/20 mt-1">
+                Impulsor Global
+              </span>
+            </div>
+          </div>
+
+          <!-- Logo 2: UNICEF -->
+          <div class="collaborator-card-premium">
+            <div class="logo-showcase-box">
+              <img 
+                src="logo/UNICEF.png" 
+                alt="UNICEF" 
+                class="collaborator-logo" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='logo/UNICEF.png';"
+              />
+            </div>
+            <div class="text-center space-y-1">
+              <h5 class="text-sm font-bold text-white font-heading">UNICEF</h5>
+              <p class="text-xs text-rose-200/90">Fondo de las Naciones Unidas</p>
+              <span class="inline-flex text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-slate-200 border border-white/20 mt-1">
+                Cooperación Internacional
+              </span>
+            </div>
+          </div>
+
+          <!-- Logo 3: CETPRO PADRE JORGE GAGLIARDI -->
+          <div class="collaborator-card-premium">
+            <div class="logo-showcase-box">
+              <img 
+                src="logo/CETPRO%20PJG.png" 
+                alt="CETPRO Padre Jorge Gagliardi" 
+                class="collaborator-logo" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src='logo/CETPRO PJG.png';"
+              />
+            </div>
+            <div class="text-center space-y-1">
+              <h5 class="text-sm font-bold text-white font-heading">CETPRO P. Jorge Gagliardi</h5>
+              <p class="text-xs text-rose-200/90">Educación Técnico-Productiva</p>
+              <span class="inline-flex text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-slate-200 border border-white/20 mt-1">
+                Sede Formativa STEAM
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Barra de Enlaces y Copyright -->
+      <div class="pt-8 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 text-slate-300">
+        <!-- Logo y descripción en pie -->
+        <div>
+          <span class="text-base font-black font-heading text-white">
+            <span class="text-[#c9848f]">+</span>Chicas<span class="text-slate-200">Tec</span>
+          </span>
+          <span class="block text-[11px] text-slate-400">Taller Integrador de Desarrollo Web &amp; Liderazgo</span>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="flex flex-wrap items-center justify-center gap-6 font-semibold text-xs text-slate-300">
+          <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
+          <a href="#programa" class="hover:text-white transition-colors">El Programa</a>
+          <a href="#pilares" class="hover:text-white transition-colors">Pilares</a>
+          <a href="#catalogo" class="hover:text-[#c9848f] transition-colors">30 Señoritas</a>
+          <a href="#colaboradores" class="hover:text-white transition-colors">Aliados</a>
+        </div>
+
+        <!-- Redes Sociales en Vidrio Blanco -->
+        <div class="flex items-center gap-2.5">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors shadow-sm" title="GitHub">
+            <i class="fa-brands fa-github text-xs"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#b76e79]/60 border border-white/20 flex items-center justify-center text-white transition-colors shadow-sm" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in text-xs"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#b76e79]/60 border border-white/20 flex items-center justify-center text-white transition-colors shadow-sm" title="Instagram">
+            <i class="fa-brands fa-instagram text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-slate-400 text-[11px]">
+        <p>&copy; 2024-2026 Programa Formativo +ChicasTec. Todos los derechos reservados.</p>
+        <p class="flex items-center gap-1 justify-center">
+          Desarrollado con <i class="fa-solid fa-heart text-[#b76e79] text-xs"></i> para visibilizar el talento femenino en STEM.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL DE DETALLE: VISUALIZADOR DE PÁGINA PERSONAL & PROYECTO (Modo Claro)
+       ======================================================================== -->
+  <div id="studentModal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <!-- Fondo desenfocado -->
+    <div id="modalBackdrop" class="fixed inset-0 modal-backdrop transition-opacity"></div>
+
+    <!-- Contenedor del Modal -->
+    <div class="relative w-full max-w-4xl bg-white rounded-3xl border border-slate-200 shadow-2xl overflow-hidden my-auto z-10">
+      
+      <!-- Barra Superior / Controles del Navegador Mockup -->
+      <div class="browser-header">
+        <div class="flex items-center gap-1.5">
+          <div class="browser-dot bg-[#b76e79]"></div>
+          <div class="browser-dot bg-amber-400"></div>
+          <div class="browser-dot bg-emerald-400"></div>
+        </div>
+
+        <!-- Barra de Dirección URL Simulada -->
+        <div class="browser-url-bar mx-auto">
+          <i class="fa-solid fa-lock text-[#1b365d] text-[10px]"></i>
+          <span id="modalUrlDisplay" class="truncate font-mono text-slate-600">https://valeria-cyberbloom.dev</span>
+        </div>
+
+        <!-- Botones de Navegación del Modal -->
+        <div class="flex items-center gap-1">
+          <button id="prevModalBtn" class="w-7 h-7 rounded-lg bg-slate-200/80 hover:bg-slate-300 text-slate-700 flex items-center justify-center text-xs" title="Anterior participante (Flecha Izquierda)">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="nextModalBtn" class="w-7 h-7 rounded-lg bg-slate-200/80 hover:bg-slate-300 text-slate-700 flex items-center justify-center text-xs" title="Siguiente participante (Flecha Derecha)">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+          <button id="closeModalBtn" class="w-7 h-7 rounded-lg bg-[#f9eff1] hover:bg-[#f2dee2] text-[#8e4c56] flex items-center justify-center text-xs ml-2" title="Cerrar (Esc)">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Contenido del Modal -->
+      <div class="max-h-[80vh] overflow-y-auto p-6 space-y-6">
+        
+        <!-- Banner Interactivo del Proyecto -->
+        <div id="modalPreviewBanner" class="relative h-56 md:h-64 rounded-2xl overflow-hidden p-6 flex flex-col justify-between bg-gradient-to-br from-[#1b365d] via-[#244472] to-[#b76e79] shadow-lg">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          
+          <div class="relative z-10 flex items-start justify-between">
+            <span id="modalProjectCategory" class="px-3 py-1 rounded-full bg-black/35 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider border border-white/20">
+              Desarrollo Frontend &amp; Interacción
+            </span>
+            <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold flex items-center gap-1.5 border border-white/20">
+              <i class="fa-solid fa-globe"></i> Proyecto Web en Vivo
+            </span>
+          </div>
+
+          <div class="relative z-10 space-y-1">
+            <div class="text-xs uppercase tracking-widest text-white/90 font-semibold">Trabajo de Página Personal</div>
+            <h3 id="modalProjectHeading" class="text-2xl sm:text-3xl font-black text-white font-heading">
+              CyberBloom Portfolio
+            </h3>
+            <p id="modalProjectSubtitle" class="text-xs sm:text-sm text-white/95 font-medium">
+              Portafolio interactivo con animaciones CSS y modo inmersivo
+            </p>
+          </div>
+        </div>
+
+        <!-- Ficha de la Autora y Detalles Técnicos -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Columna Izquierda: Perfil de la Creadora -->
+          <div class="glass-card p-5 rounded-2xl border border-slate-200 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-14 h-14 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-[#1b365d] to-[#b76e79] shrink-0 shadow-sm">
+                <img id="modalAvatar" src="" alt="" class="w-full h-full object-cover rounded-full" />
+              </div>
+              <div>
+                <h4 id="modalName" class="text-base font-bold text-slate-900 font-heading">Nombre Estudiante</h4>
+                <p id="modalRole" class="text-xs text-[#1b365d] font-semibold">Frontend Developer Jr.</p>
+                <p id="modalCity" class="text-xs text-slate-500 mt-0.5">
+                  <i class="fa-solid fa-location-dot text-[#b76e79] mr-1"></i> Lima, Perú
+                </p>
+              </div>
+            </div>
+
+            <!-- Cita Personal -->
+            <div class="p-3 rounded-xl bg-[#f0f4f9]/80 border border-[#cbd5e1] text-xs text-slate-700 italic">
+              <i class="fa-solid fa-quote-left text-[#1b365d] mr-1"></i>
+              <span id="modalQuote">"La tecnología es mi herramienta para construir un futuro mejor."</span>
+            </div>
+
+            <!-- Botones de Contacto -->
+            <div class="space-y-2 pt-2">
+              <a id="modalGithubBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-github text-sm"></i>
+                <span>Ver Código en GitHub</span>
+              </a>
+              <a id="modalLinkedinBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2 px-3 rounded-xl bg-[#f0f4f9] hover:bg-[#e2eaf3] text-[#1b365d] border border-[#cbd5e1] text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-linkedin text-sm"></i>
+                <span>Conectar en LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Descripción y Tecnologías -->
+          <div class="md:col-span-2 space-y-5">
+            <div>
+              <h4 class="text-xs font-bold text-[#1b365d] uppercase tracking-wider mb-1">
+                Acerca del Trabajo de Página Personal
+              </h4>
+              <h3 id="modalProjectTitle" class="text-xl font-bold text-slate-900 font-heading mb-2">
+                CyberBloom Portfolio
+              </h3>
+              <p id="modalProjectDesc" class="text-sm text-slate-600 leading-relaxed">
+                Descripción detallada del proyecto personal desarrollado durante el taller integrador...
+              </p>
+            </div>
+
+            <!-- Stack de Tecnologías Aplicadas -->
+            <div>
+              <h5 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Tecnologías Dominadas en el Proyecto:
+              </h5>
+              <div id="modalTechStack" class="flex flex-wrap gap-2">
+                <!-- Badges inyectadas por JS -->
+              </div>
+            </div>
+
+            <!-- Habilidades & Competencias -->
+            <div>
+              <h5 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                Competencias Destacadas:
+              </h5>
+              <div id="modalSkills" class="flex flex-wrap gap-2">
+                <!-- Badges inyectadas por JS -->
+              </div>
+            </div>
+
+            <!-- Botón Visitar Sitio Web -->
+            <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
+              <a id="modalVisitBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary-gradient px-6 py-3 rounded-xl text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                <span>Abrir Sitio Web Completo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <span class="text-xs text-slate-500">
+                <i class="fa-solid fa-keyboard mr-1"></i> Usa las flechas &larr; &rarr; para navegar entre las 30 creadoras
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Botón Volver Arriba Flotante -->
+  <button 
+    id="backToTopBtn" 
+    class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full btn-primary-gradient text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 pointer-events-none"
+    title="Volver al inicio"
+    aria-label="Volver arriba"
+  >
+    <i class="fa-solid fa-arrow-up text-sm"></i>
+  </button>
+
+  <!-- Notificación Flotante (Toast) -->
+  <div id="toastNotification" class="fixed bottom-6 left-6 z-50 flex items-center gap-3 bg-white border border-slate-200 px-4 py-3 rounded-2xl shadow-xl transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none max-w-sm">
+    <div id="toastIcon" class="w-8 h-8 rounded-full bg-[#f9eff1] text-[#b76e79] flex items-center justify-center shrink-0">
+      <i class="fa-solid fa-heart text-sm"></i>
+    </div>
+    <div class="text-xs">
+      <h6 id="toastTitle" class="font-bold text-slate-900">¡Apoyo registrado!</h6>
+      <p id="toastMessage" class="text-slate-500">Has apoyado el proyecto con un corazón.</p>
+    </div>
+  </div>
+
+  <!-- Scripts: Datos y Lógica -->
+  <script src="data/students.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
