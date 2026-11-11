@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Página Personal | +ChicasTec</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Estilos de la plantilla -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[#f8fafc] text-slate-800 min-h-screen">
+
+  <!-- Barra de Navegación -->
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <!-- Botón para regresar a la Landing Page Principal -->
+      <a href="../../index.html" class="flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-[#1b365d] transition-colors">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Volver a +ChicasTec</span>
+      </a>
+
+      <div class="flex items-center gap-6 text-xs font-semibold text-slate-600">
+        <a href="#sobre-mi" class="hover:text-[#1b365d]">Sobre Mí</a>
+        <a href="#habilidades" class="hover:text-[#1b365d]">Habilidades</a>
+        <a href="#proyectos" class="hover:text-[#b76e79]">Proyectos</a>
+        <a href="#contacto" class="hover:text-[#1b365d]">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Personal -->
+  <header class="py-16 px-4 bg-gradient-to-b from-[#f0f4f9] to-transparent">
+    <div class="max-w-3xl mx-auto text-center space-y-5">
+      <!-- Foto / Avatar -->
+      <div class="w-28 h-28 mx-auto rounded-full p-1 bg-gradient-to-tr from-[#1b365d] to-[#b76e79] shadow-lg shadow-slate-300/40">
+        <img 
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" 
+          alt="Tu Nombre" 
+          class="w-full h-full object-cover rounded-full"
+        />
+      </div>
+
+      <!-- Nombre y Rol -->
+      <div>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#f9eff1] text-[#8e4c56] border border-[#e6c5cb] mb-2">
+          <i class="fa-solid fa-sparkles text-[10px] text-[#b76e79]"></i> Egresada +ChicasTec
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-black font-heading text-slate-900">
+          Hola, soy <span class="text-gradient">Tu Nombre Completo</span>
+        </h1>
+        <p class="text-sm font-semibold text-[#1b365d] mt-1">
+          Desarrolladora Frontend Jr. &amp; Diseñadora Web
+        </p>
+        <p class="text-xs text-slate-500 mt-0.5">
+          <i class="fa-solid fa-location-dot text-[#b76e79]"></i> Tu Ciudad, Perú
+        </p>
+      </div>
+
+      <!-- Frase Destacada -->
+      <p class="text-sm text-slate-600 max-w-xl mx-auto italic leading-relaxed bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+        "Transformando ideas en código limpio y experiencias accesibles que impacten positivamente en mi comunidad."
+      </p>
+
+      <!-- Botones de Redes -->
+      <div class="flex items-center justify-center gap-3 pt-2">
+        <a href="https://github.com" target="_blank" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center gap-2 shadow-sm transition-all">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="px-4 py-2 rounded-xl bg-[#1b365d] hover:bg-[#0f233d] text-white text-xs font-bold flex items-center gap-2 shadow-sm transition-all">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="#contacto" class="px-4 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 text-xs font-bold flex items-center gap-2 shadow-sm transition-all">
+          <i class="fa-solid fa-envelope text-[#b76e79]"></i>
+          <span>Escríbeme</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección Sobre Mí -->
+  <section id="sobre-mi" class="py-12 px-4 max-w-3xl mx-auto">
+    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+      <h2 class="text-xl font-bold font-heading text-slate-900 flex items-center gap-2">
+        <i class="fa-solid fa-user-astronaut text-[#1b365d]"></i>
+        <span>Sobre Mí</span>
+      </h2>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        Soy una apasionada del desarrollo web y la tecnología. Formo parte de la generación de graduadas del <strong>Taller Integrador +ChicasTec</strong>, donde aprendí a estructurar la web con HTML5 semántico, maquetar con CSS responsivo y dar vida a las interfaces con JavaScript.
+      </p>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        Mi objetivo es seguir creciendo como programadora frontend y contribuir en proyectos de impacto social, educación y accesibilidad digital.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Habilidades -->
+  <section id="habilidades" class="py-12 px-4 max-w-3xl mx-auto">
+    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
+      <h2 class="text-xl font-bold font-heading text-slate-900 flex items-center gap-2">
+        <i class="fa-solid fa-code text-[#b76e79]"></i>
+        <span>Mis Habilidades Técnicas</span>
+      </h2>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="p-3 bg-[#f0f4f9] rounded-xl border border-[#cbd5e1] text-center">
+          <i class="fa-brands fa-html5 text-2xl text-orange-500 mb-1"></i>
+          <h4 class="text-xs font-bold text-slate-800">HTML5</h4>
+          <p class="text-[10px] text-slate-500">Semántica &amp; a11y</p>
+        </div>
+        <div class="p-3 bg-[#f0f4f9] rounded-xl border border-[#cbd5e1] text-center">
+          <i class="fa-brands fa-css3-alt text-2xl text-blue-500 mb-1"></i>
+          <h4 class="text-xs font-bold text-slate-800">CSS3</h4>
+          <p class="text-[10px] text-slate-500">Grid, Flexbox &amp; Tailwind</p>
+        </div>
+        <div class="p-3 bg-[#f0f4f9] rounded-xl border border-[#cbd5e1] text-center">
+          <i class="fa-brands fa-js text-2xl text-yellow-500 mb-1"></i>
+          <h4 class="text-xs font-bold text-slate-800">JavaScript</h4>
+          <p class="text-[10px] text-slate-500">DOM &amp; Eventos</p>
+        </div>
+        <div class="p-3 bg-[#f9eff1] rounded-xl border border-[#e6c5cb] text-center">
+          <i class="fa-brands fa-figma text-2xl text-[#b76e79] mb-1"></i>
+          <h4 class="text-xs font-bold text-slate-800">Figma</h4>
+          <p class="text-[10px] text-slate-500">UI/UX &amp; Prototipado</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Proyectos -->
+  <section id="proyectos" class="py-12 px-4 max-w-3xl mx-auto space-y-6">
+    <div class="text-center">
+      <h2 class="text-2xl font-black font-heading text-slate-900">Mis Proyectos Destacados</h2>
+      <p class="text-xs text-slate-500 mt-1">Desarrollados durante mi formación en +ChicasTec</p>
+    </div>
+
+    <!-- Tarjeta de Proyecto 1 -->
+    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3 hover:shadow-md transition-all">
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="text-[10px] font-bold text-[#1b365d] uppercase tracking-wider">Proyecto Integrador</span>
+          <h3 class="text-lg font-bold text-slate-900 font-heading">Nombre de mi Proyecto Principal</h3>
+        </div>
+        <a href="#" class="text-xs font-bold text-[#1b365d] hover:text-[#b76e79] transition-colors flex items-center gap-1">
+          <span>Ver Demo</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+      <p class="text-xs text-slate-600 leading-relaxed">
+        Descripción breve de lo que hace el proyecto, el problema que resuelve y las características principales que programaste.
+      </p>
+      <div class="flex flex-wrap gap-1.5 pt-1">
+        <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 text-slate-700">HTML5</span>
+        <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#f0f4f9] text-[#1b365d] border border-[#cbd5e1]">CSS3</span>
+        <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#f9eff1] text-[#8e4c56] border border-[#e6c5cb]">JavaScript</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto / Footer -->
+  <footer id="contacto" class="py-12 px-4 bg-white border-t border-slate-200 text-center space-y-4">
+    <div class="max-w-md mx-auto space-y-2">
+      <h3 class="text-lg font-bold font-heading text-slate-900">¿Quieres conectar conmigo?</h3>
+      <p class="text-xs text-slate-500">Estoy disponible para prácticas, proyectos colaborativos o mentorías.</p>
+      <p class="text-xs font-semibold text-[#1b365d]">correo@ejemplo.com</p>
+    </div>
+    <div class="pt-6 border-t border-slate-100 text-[11px] text-slate-400">
+      &copy; 2024 Página Personal • Creada en el Programa Formativo <strong>+ChicasTec</strong>
+    </div>
+  </footer>
+
+</body>
+</html>
