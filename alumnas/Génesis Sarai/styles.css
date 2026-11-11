@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Estilos de la Plantilla de Portafolio Personal - +ChicasTec
+   Paleta: Azul Marino (#1b365d) & Palo Rosa (#b76e79)
+   ========================================================================== */
+
+:root {
+  --navy-primary: #1b365d;
+  --navy-dark: #0f233d;
+  --palo-rosa: #b76e79;
+  --palo-rosa-light: #f9eff1;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #1b365d 0%, #b76e79 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
