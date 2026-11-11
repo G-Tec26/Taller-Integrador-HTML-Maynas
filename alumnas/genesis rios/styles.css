@@ -1,0 +1,179 @@
+/* ==========================================================================
+   PORTAFOLIO PERSONAL - GÉNESIS RÍOS
+   Paleta Exclusiva: Rojo Vino Imperial & Oro Metálico
+   Programa Formativo +ChicasTec
+   ========================================================================== */
+
+:root {
+  --wine-darkest: #120205;
+  --wine-900: #23040a;
+  --wine-800: #380710;
+  --wine-700: #540c1a;
+  --wine-600: #781326;
+  --wine-500: #9e1a32;
+  --wine-accent: #c42340;
+
+  --gold-50: #fefcf3;
+  --gold-100: #fcf6dc;
+  --gold-200: #f8ecb3;
+  --gold-300: #f2dc7f;
+  --gold-400: #e8c74a;
+  --gold-500: #d4af37; /* Oro metálico clásico */
+  --gold-600: #b88f28;
+  --gold-700: #936e1f;
+  --gold-glow: rgba(212, 175, 55, 0.35);
+  --wine-glow: rgba(158, 26, 50, 0.45);
+}
+
+/* Tipografías base */
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--wine-darkest);
+  color: #f1e6e8;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-serif-lux {
+  font-family: 'Cinzel', 'Outfit', serif;
+}
+
+/* Barra de desplazamiento personalizada en Rojo Vino y Oro */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #150306;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #781326 0%, #d4af37 100%);
+  border-radius: 9999px;
+  border: 2px solid #150306;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9e1a32 0%, #f2dc7f 100%);
+}
+
+/* Efectos de degradado de texto Dorado */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fff2be 0%, #d4af37 45%, #f6e69f 70%, #aa7c11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-wine-gold {
+  background: linear-gradient(135deg, #f8a5b5 0%, #d4af37 50%, #fcebb0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fondos y bordes de cristal (Glassmorphism Vino y Oro) */
+.glass-nav {
+  background: rgba(26, 4, 9, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(46, 8, 16, 0.75) 0%, rgba(24, 4, 8, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.15);
+  transform: translateY(-4px);
+}
+
+.glass-card-featured {
+  background: linear-gradient(145deg, rgba(65, 11, 23, 0.85) 0%, rgba(32, 5, 11, 0.95) 100%);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 10px 35px -5px rgba(120, 19, 38, 0.35), 0 0 25px rgba(212, 175, 55, 0.12);
+}
+
+/* Botones Premium */
+.btn-gold {
+  background: linear-gradient(135deg, #d4af37 0%, #f6e59c 50%, #b88f28 100%);
+  color: #1a0307;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #e8c74a 0%, #fff7d1 50%, #c99f30 100%);
+  box-shadow: 0 6px 26px rgba(212, 175, 55, 0.55), 0 0 15px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-wine {
+  background: linear-gradient(135deg, #540c1a 0%, #781326 50%, #380710 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #fefcf3;
+  transition: all 0.3s ease;
+}
+
+.btn-wine:hover {
+  background: linear-gradient(135deg, #781326 0%, #9e1a32 50%, #540c1a 100%);
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 6px 22px rgba(120, 19, 38, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Anillos y resplandores de Avatar */
+.avatar-glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #d4af37 0%, #781326 50%, #f6e69f 100%);
+  z-index: 0;
+  filter: blur(14px);
+  opacity: 0.65;
+  animation: pulseGlow 4s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+}
+
+/* Efecto de brillo de fondo decorativo */
+.bg-glow-wine {
+  background: radial-gradient(circle, rgba(120, 19, 38, 0.38) 0%, rgba(18, 2, 5, 0) 70%);
+}
+
+.bg-glow-gold {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, rgba(18, 2, 5, 0) 70%);
+}
+
+/* Animación sutil de levitación */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 5s ease-in-out infinite;
+}

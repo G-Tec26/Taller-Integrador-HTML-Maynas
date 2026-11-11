@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgFigma" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24050b" />
+      <stop offset="100%" stop-color="#120205" />
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2be" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#936e1f" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgFigma)" />
+
+  <!-- Espacio de trabajo Figma -->
+  <g transform="translate(50, 40)">
+    <!-- Barra Superior de Herramientas -->
+    <rect width="700" height="50" rx="12" fill="#380710" stroke="#d4af37" stroke-width="1.5" />
+    <!-- Icono Figma de Colores -->
+    <g transform="translate(20, 13)">
+      <path d="M0 0 L12 0 C15.3 0 18 2.7 18 6 C18 9.3 15.3 12 12 12 L0 12 Z" fill="#F24E1E"/>
+      <path d="M0 12 L12 12 C15.3 12 18 14.7 18 18 C18 21.3 15.3 24 12 24 L0 24 Z" fill="#0ACF83"/>
+      <path d="M-12 0 L0 0 L0 12 L-12 12 C-15.3 12 -18 9.3 -18 6 C-18 2.7 -15.3 0 -12 0 Z" fill="#FF7262" transform="translate(18, 0)"/>
+      <path d="M-12 12 L0 12 L0 24 L-12 24 C-15.3 24 -18 21.3 -18 18 C-18 14.7 -15.3 12 -12 12 Z" fill="#A259FF" transform="translate(18, 0)"/>
+    </g>
+    <text x="75" y="32" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#f8ecb3">Figma • UI/UX Design System</text>
+
+    <!-- Herramientas centrales -->
+    <g transform="translate(340, 15)" fill="#cca4ab" font-size="14">
+      <rect x="0" y="0" width="30" height="20" rx="4" fill="#540c1a" stroke="#d4af37" stroke-width="1" />
+      <text x="15" y="15" text-anchor="middle" fill="#d4af37" font-weight="bold">#</text>
+      <text x="45" y="15">T</text>
+      <text x="75" y="15">🎨</text>
+      <text x="105" y="15">📐</text>
+    </g>
+
+    <!-- Canvas de Diseño: Mockup de Teléfono Celular -->
+    <g transform="translate(80, 70)">
+      <!-- Marco de Smartphone -->
+      <rect width="200" height="360" rx="32" fill="#1b0307" stroke="url(#goldGrad2)" stroke-width="3" />
+      <rect x="20" y="20" width="160" height="320" rx="18" fill="#2d0811" />
+      <!-- Barra de estado celular -->
+      <circle cx="100" cy="30" r="4" fill="#000000" />
+      
+      <!-- Componentes de la App móvil -->
+      <rect x="35" y="50" width="130" height="24" rx="6" fill="#540c1a" />
+      <text x="100" y="66" font-family="'Outfit', sans-serif" font-size="9" font-weight="700" fill="#d4af37" text-anchor="middle">GÉNESIS STORE</text>
+
+      <!-- Banner de producto -->
+      <rect x="35" y="85" width="130" height="65" rx="8" fill="#781326" stroke="#d4af37" stroke-width="1" />
+      <text x="100" y="122" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Colección Loreto</text>
+
+      <!-- Tarjetas de items -->
+      <rect x="35" y="160" width="60" height="75" rx="8" fill="#1b0307" stroke="#d4af37" stroke-width="0.8" />
+      <rect x="42" y="168" width="46" height="35" rx="4" fill="#540c1a" />
+      <text x="65" y="222" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#f8ecb3" text-anchor="middle">Artesanía S/. 45</text>
+
+      <rect x="105" y="160" width="60" height="75" rx="8" fill="#1b0307" stroke="#d4af37" stroke-width="0.8" />
+      <rect x="112" y="168" width="46" height="35" rx="4" fill="#540c1a" />
+      <text x="135" y="222" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#f8ecb3" text-anchor="middle">Cerámica S/. 60</text>
+
+      <!-- Botón Agregar al Carrito -->
+      <rect x="35" y="248" width="130" height="26" rx="13" fill="url(#goldGrad2)" />
+      <text x="100" y="265" font-family="'Outfit', sans-serif" font-size="10" font-weight="800" fill="#1a0307" text-anchor="middle">Comprar Ahora</text>
+    </g>
+
+    <!-- Paleta de Colores y Guías de Diseño a la Derecha -->
+    <g transform="translate(340, 70)">
+      <!-- Panel de colores -->
+      <rect width="330" height="160" rx="16" fill="#1f050b" stroke="#d4af37" stroke-width="1" />
+      <text x="20" y="32" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#d4af37">PALETA OFICIAL: VINO Y ORO</text>
+      
+      <!-- Muestras de color -->
+      <g transform="translate(20, 50)">
+        <circle cx="25" cy="25" r="22" fill="#540c1a" stroke="#d4af37" stroke-width="2" />
+        <text x="25" y="65" font-size="10" fill="#cca4ab" text-anchor="middle">#540c1a</text>
+        
+        <circle cx="85" cy="25" r="22" fill="#781326" stroke="#d4af37" stroke-width="2" />
+        <text x="85" y="65" font-size="10" fill="#cca4ab" text-anchor="middle">#781326</text>
+
+        <circle cx="145" cy="25" r="22" fill="#d4af37" stroke="#ffffff" stroke-width="2" />
+        <text x="145" y="65" font-size="10" fill="#d4af37" font-weight="bold" text-anchor="middle">#d4af37</text>
+
+        <circle cx="205" cy="25" r="22" fill="#f6e59c" stroke="#d4af37" stroke-width="2" />
+        <text x="205" y="65" font-size="10" fill="#cca4ab" text-anchor="middle">#f6e59c</text>
+
+        <circle cx="265" cy="25" r="22" fill="#120205" stroke="#d4af37" stroke-width="2" />
+        <text x="265" y="65" font-size="10" fill="#cca4ab" text-anchor="middle">#120205</text>
+      </g>
+
+      <!-- Panel de Tipografía -->
+      <g transform="translate(0, 180)">
+        <rect width="330" height="160" rx="16" fill="#1f050b" stroke="#d4af37" stroke-width="1" />
+        <text x="20" y="32" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#d4af37">SISTEMA TIPOGRÁFICO</text>
+        <text x="20" y="65" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#ffffff">Outfit Bold 48px</text>
+        <text x="20" y="95" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="500" fill="#f8ecb3">Plus Jakarta Sans Regular 16px</text>
+        <text x="20" y="125" font-family="'Cinzel', serif" font-size="16" font-weight="700" fill="#d4af37">Cinzel Luxury Monogram</text>
+      </g>
+    </g>
+
+    <!-- Cursor de Selección Figma en el canvas -->
+    <g transform="translate(230, 240)">
+      <polygon points="0,0 0,22 6,17 12,28 17,25 10,14 18,14" fill="#d4af37" stroke="#120205" stroke-width="1.5" />
+    </g>
+  </g>
+</svg>

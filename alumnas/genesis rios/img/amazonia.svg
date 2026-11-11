@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#380710" />
+      <stop offset="40%" stop-color="#781326" />
+      <stop offset="70%" stop-color="#ba2a49" />
+      <stop offset="100%" stop-color="#d4af37" />
+    </linearGradient>
+    <linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37" />
+      <stop offset="40%" stop-color="#936e1f" />
+      <stop offset="70%" stop-color="#380710" />
+      <stop offset="100%" stop-color="#1a0307" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#fff2be" />
+      <stop offset="100%" stop-color="#d4af37" />
+    </linearGradient>
+  </defs>
+
+  <!-- Cielo Amazónico al Atardecer -->
+  <rect width="800" height="500" fill="url(#skyGrad)" />
+
+  <!-- Sol Dorado Amazónico -->
+  <circle cx="400" cy="220" r="90" fill="url(#sunGrad)" opacity="0.95" />
+  <circle cx="400" cy="220" r="130" fill="#d4af37" opacity="0.25" />
+
+  <!-- Silueta de Selva al Fondo -->
+  <path d="M0 290 Q80 270 160 290 T320 280 T480 290 T640 275 T800 290 L800 500 L0 500 Z" fill="#2d0811" />
+
+  <!-- Río Amazonas Brillante (Curva Dorada) -->
+  <path d="M400 280 C360 320, 260 350, 310 400 C360 450, 200 480, 100 500 L700 500 C620 460, 520 420, 480 370 C440 320, 420 300, 400 280 Z" fill="url(#riverGrad)" />
+
+  <!-- Selva en Primer Plano con Palmeras / Aguaje -->
+  <path d="M0 360 C80 340, 140 370, 220 350 L250 500 L0 500 Z" fill="#140205" />
+  <path d="M580 350 C660 340, 720 370, 800 350 L800 500 L550 500 Z" fill="#140205" />
+
+  <!-- Palmeras Amazónicas Silueta Izquierda -->
+  <g transform="translate(100, 220)" stroke="#140205" stroke-width="4">
+    <path d="M50 180 Q45 90 20 20" fill="none" stroke-width="6" />
+    <!-- Hojas de palmera -->
+    <path d="M20 20 Q-20 -10 -50 10" fill="none" />
+    <path d="M20 20 Q-10 -30 20 -40" fill="none" />
+    <path d="M20 20 Q50 -30 70 -10" fill="none" />
+    <path d="M20 20 Q60 10 70 40" fill="none" />
+    <path d="M20 20 Q-10 10 -40 40" fill="none" />
+  </g>
+
+  <!-- Palmeras Amazónicas Derecha -->
+  <g transform="translate(680, 200)" stroke="#140205" stroke-width="4">
+    <path d="M-30 200 Q-20 100 0 20" fill="none" stroke-width="6" />
+    <path d="M0 20 Q-40 -10 -60 10" fill="none" />
+    <path d="M0 20 Q-20 -30 10 -40" fill="none" />
+    <path d="M0 20 Q40 -20 60 0" fill="none" />
+    <path d="M0 20 Q30 20 40 50" fill="none" />
+  </g>
+
+  <!-- Aves volando en el atardecer -->
+  <g stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.8">
+    <path d="M300 130 Q310 120 320 130 Q330 120 340 130" />
+    <path d="M350 150 Q358 142 366 150 Q374 142 382 150" />
+    <path d="M260 160 Q268 152 276 160 Q284 152 292 160" />
+  </g>
+
+  <!-- Tipografía de Identidad Regional -->
+  <g transform="translate(400, 450)" text-anchor="middle">
+    <text font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#fff2be" letter-spacing="3">AMAZONÍA VIVA • MAYNAS</text>
+    <text y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#d4af37" letter-spacing="2">LORETO, PERÚ</text>
+  </g>
+</svg>

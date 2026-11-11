@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Génesis Ríos | Portafolio Profesional • Frontend Developer & UI/UX</title>
+  
+  <!-- Favicon con iniciales GR -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23540c1a'/><text x='50%' y='63%' font-size='50' font-weight='900' fill='%23d4af37' text-anchor='middle' font-family='serif'>GR</text></svg>" />
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans & Cinzel (Luxury) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wine: {
+              50: '#fdf2f4',
+              100: '#fbe6e9',
+              200: '#f8d0d6',
+              300: '#f1abb7',
+              400: '#e5778b',
+              500: '#c42340',
+              600: '#9e1a32',
+              700: '#781326',
+              800: '#540c1a',
+              900: '#380710',
+              950: '#1a0307',
+            },
+            gold: {
+              50: '#fefcf3',
+              100: '#fcf6dc',
+              200: '#f8ecb3',
+              300: '#f2dc7f',
+              400: '#e8c74a',
+              500: '#d4af37',
+              600: '#b88f28',
+              700: '#936e1f',
+              800: '#785420',
+              900: '#664620',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Estilos de la plantilla (Rojo Vino y Dorado) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[#120205] text-[#f4e8ea] min-h-screen relative selection:bg-[#d4af37] selection:text-[#1a0307]">
+
+  <!-- Efectos de Luces de Fondo (Orbes de color Vino y Oro) -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-glow-wine blur-3xl opacity-70"></div>
+    <div class="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-glow-wine blur-3xl opacity-50"></div>
+    <div class="absolute -bottom-20 left-1/4 w-[450px] h-[450px] rounded-full bg-glow-gold blur-3xl opacity-40"></div>
+  </div>
+
+  <!-- Barra de Navegación Principal -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- Logo y Marca Personal -->
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#540c1a] to-[#d4af37] p-[1.5px] shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-transform duration-300 group-hover:scale-105">
+          <div class="w-full h-full bg-[#1e050a] rounded-[10px] flex items-center justify-center">
+            <span class="font-serif font-black text-sm tracking-wider text-gradient-gold">GR</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-black text-base sm:text-lg tracking-tight text-white group-hover:text-[#f8ecb3] transition-colors">
+            Génesis Ríos
+          </span>
+          <span class="text-[10px] font-medium tracking-widest text-[#d4af37] uppercase -mt-1">
+            Frontend &amp; UI/UX
+          </span>
+        </div>
+      </a>
+
+      <!-- Navegación de Escritorio -->
+      <div class="hidden md:flex items-center gap-7 text-xs font-semibold text-[#eed8dc]">
+        <a href="#sobre-mi" class="hover:text-[#d4af37] transition-colors py-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-user text-[11px] text-[#d4af37]"></i> Sobre Mí
+        </a>
+        <a href="#habilidades" class="hover:text-[#d4af37] transition-colors py-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-code text-[11px] text-[#d4af37]"></i> Habilidades
+        </a>
+        <a href="#proyectos" class="hover:text-[#d4af37] transition-colors py-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-laptop-code text-[11px] text-[#d4af37]"></i> Proyectos
+        </a>
+        <a href="#galeria" class="hover:text-[#d4af37] transition-colors py-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-images text-[11px] text-[#d4af37]"></i> Galería
+        </a>
+        <a href="#trayectoria" class="hover:text-[#d4af37] transition-colors py-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-graduation-cap text-[11px] text-[#d4af37]"></i> Trayectoria
+        </a>
+        <a href="#contacto" class="hover:text-[#d4af37] transition-colors py-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-[11px] text-[#d4af37]"></i> Contacto
+        </a>
+      </div>
+
+      <!-- Acciones de Cabecera -->
+      <div class="flex items-center gap-3">
+        <!-- Volver a la Landing Page Principal de +ChicasTec -->
+        <a href="../../index.html" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#f8ecb3] bg-[#3a0812]/80 border border-[#d4af37]/30 hover:border-[#d4af37] hover:bg-[#540c1a] hover:shadow-[0_0_15px_rgba(212,175,55,0.35)] transition-all">
+          <i class="fa-solid fa-arrow-left text-[#d4af37]"></i>
+          <span>Volver a +ChicasTec</span>
+        </a>
+
+        <!-- Botón Contactar -->
+        <a href="#contacto" class="btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5">
+          <i class="fa-solid fa-paper-plane text-[11px]"></i>
+          <span class="hidden sm:inline">Hablemos</span>
+        </a>
+
+        <!-- Botón Menú Móvil -->
+        <button id="mobile-menu-btn" class="md:hidden text-[#f4e8ea] hover:text-[#d4af37] p-2 text-lg focus:outline-none" aria-label="Abrir Menú">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#1f050b] border-b border-[#d4af37]/20 px-6 py-4 space-y-3">
+      <a href="#sobre-mi" class="block text-sm font-semibold text-[#f4e8ea] hover:text-[#d4af37] py-2 border-b border-white/5">
+        <i class="fa-solid fa-user text-[#d4af37] mr-2"></i> Sobre Mí
+      </a>
+      <a href="#habilidades" class="block text-sm font-semibold text-[#f4e8ea] hover:text-[#d4af37] py-2 border-b border-white/5">
+        <i class="fa-solid fa-code text-[#d4af37] mr-2"></i> Habilidades
+      </a>
+      <a href="#proyectos" class="block text-sm font-semibold text-[#f4e8ea] hover:text-[#d4af37] py-2 border-b border-white/5">
+        <i class="fa-solid fa-laptop-code text-[#d4af37] mr-2"></i> Proyectos
+      </a>
+      <a href="#galeria" class="block text-sm font-semibold text-[#f4e8ea] hover:text-[#d4af37] py-2 border-b border-white/5">
+        <i class="fa-solid fa-images text-[#d4af37] mr-2"></i> Galería
+      </a>
+      <a href="#trayectoria" class="block text-sm font-semibold text-[#f4e8ea] hover:text-[#d4af37] py-2 border-b border-white/5">
+        <i class="fa-solid fa-graduation-cap text-[#d4af37] mr-2"></i> Trayectoria
+      </a>
+      <a href="#contacto" class="block text-sm font-semibold text-[#f4e8ea] hover:text-[#d4af37] py-2 border-b border-white/5">
+        <i class="fa-solid fa-envelope text-[#d4af37] mr-2"></i> Contacto
+      </a>
+      <a href="../../index.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#d4af37] pt-2">
+        <i class="fa-solid fa-arrow-left"></i> Volver a la página principal +ChicasTec
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <header id="inicio" class="relative z-10 pt-12 pb-20 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Columna de Texto & Presentación -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Insignias Superiores -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-[#380710]/90 text-[#f8ecb3] border border-[#d4af37]/40 shadow-[0_0_12px_rgba(212,175,55,0.2)]">
+              <i class="fa-solid fa-sparkles text-[#d4af37] text-[11px]"></i>
+              <span>Programa Formativo +ChicasTec</span>
+            </span>
+
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/70 border border-emerald-500/40 text-emerald-300">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Disponible para nuevos proyectos</span>
+            </span>
+          </div>
+
+          <!-- Titular Principal -->
+          <div class="space-y-2">
+            <p class="text-sm uppercase tracking-widest font-semibold text-[#d4af37]">
+              Hola, mi nombre es
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-tight text-white">
+              Génesis <span class="text-gradient-gold">Ríos</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-bold text-[#f5d77f]">
+              Desarrolladora Frontend Jr. &amp; Diseñadora Web UI/UX
+            </p>
+            <p class="text-xs sm:text-sm text-[#e0b8be] flex items-center justify-center lg:justify-start gap-2 pt-0.5">
+              <i class="fa-solid fa-location-dot text-[#d4af37]"></i>
+              <span>Maynas, Loreto • Perú</span>
+            </p>
+          </div>
+
+          <!-- Declaración de Misión / Bio Corta -->
+          <p class="text-sm sm:text-base text-[#e5d0d4] leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal">
+            Apasionada por la creación de interfaces web modernas, dinámicas y accesibles. Fusiono la precisión del código limpio con una estética visual sofisticada para dar vida a proyectos que generen un impacto positivo en mi comunidad y en el entorno digital.
+          </p>
+
+          <!-- Botones de Acción -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <a href="#proyectos" class="btn-gold px-6 py-3 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2.5">
+              <i class="fa-solid fa-rocket text-sm"></i>
+              <span>Explorar Proyectos</span>
+            </a>
+
+            <a href="#contacto" class="btn-wine px-5 py-3 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane text-xs text-[#d4af37]"></i>
+              <span>Contactar Conmigo</span>
+            </a>
+
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-[#20050a] hover:bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/30 hover:border-[#d4af37] text-xs sm:text-sm font-bold flex items-center gap-2 transition-all" title="Ver perfil de GitHub">
+              <i class="fa-brands fa-github text-sm text-[#d4af37]"></i>
+              <span class="hidden sm:inline">GitHub</span>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-[#20050a] hover:bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/30 hover:border-[#d4af37] text-xs sm:text-sm font-bold flex items-center gap-2 transition-all" title="Ver perfil de LinkedIn">
+              <i class="fa-brands fa-linkedin-in text-sm text-[#d4af37]"></i>
+              <span class="hidden sm:inline">LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Frase Personal Inspiracional -->
+          <div class="pt-4">
+            <div class="p-4 rounded-2xl bg-[#28060e]/70 border-l-4 border-[#d4af37] border border-white/5 shadow-sm text-left">
+              <p class="text-xs sm:text-sm text-[#e8cbd0] italic leading-relaxed">
+                <i class="fa-solid fa-quote-left text-[#d4af37] mr-1.5 opacity-60"></i>
+                "El código es el lienzo donde la creatividad y la lógica se unen para transformar realidades y abrir caminos para más mujeres en la tecnología."
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna de Avatar / Visual Card -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center">
+          
+          <!-- Contenedor Circular Perfectamente Centrado -->
+          <div class="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center">
+            
+            <!-- Resplandor Dorado y Vino (Detrás del avatar) -->
+            <div class="avatar-glow"></div>
+
+            <!-- Borde Gradiente Oro y Vino Exterior -->
+            <div class="relative z-10 w-full h-full rounded-full p-2 bg-gradient-to-tr from-[#d4af37] via-[#9e1a32] to-[#f8ecb3] shadow-[0_0_35px_rgba(158,26,50,0.45)]">
+              <!-- Marco interior oscuro para contraste -->
+              <div class="w-full h-full rounded-full p-1 bg-[#150206] overflow-hidden flex items-center justify-center">
+                <!-- Fotografía de Perfil (Reemplazable por tu propia foto) -->
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
+                  alt="Génesis Ríos - Fotografía de perfil" 
+                  class="w-full h-full object-cover object-center rounded-full transition-transform duration-500 hover:scale-105 block"
+                />
+              </div>
+            </div>
+
+            <!-- Insignia Flotante Inferior: Egresada +ChicasTec (Centrada exactamente) -->
+            <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 z-20 px-4 py-1.5 rounded-full bg-[#20040a] border border-[#d4af37] shadow-[0_6px_20px_rgba(0,0,0,0.8)] flex items-center gap-2 whitespace-nowrap">
+              <i class="fa-solid fa-certificate text-[#d4af37] text-xs"></i>
+              <span class="text-[11px] font-bold text-white tracking-wide">Egresada +ChicasTec</span>
+            </div>
+
+            <!-- Insignia Flotante Superior: Rol Frontend Dev -->
+            <div class="absolute -top-1 -right-1 z-20 px-3.5 py-1 rounded-xl bg-gradient-to-r from-[#540c1a] to-[#781326] border border-[#d4af37]/60 shadow-[0_4px_15px_rgba(0,0,0,0.6)] flex items-center gap-1.5 animate-float-slow">
+              <i class="fa-solid fa-code text-[#d4af37] text-[10px]"></i>
+              <span class="text-[10px] font-extrabold text-[#fdf6dc]">Frontend Dev</span>
+            </div>
+
+          </div>
+
+          <!-- Métricas Rápidas Destacadas -->
+          <div class="grid grid-cols-3 gap-2.5 w-full mt-10 max-w-sm">
+            <div class="p-3 rounded-2xl glass-card text-center">
+              <span class="block text-xl font-black text-gradient-gold font-heading">100%</span>
+              <span class="text-[10px] text-[#cca4ab] font-medium leading-tight">Dedicación &amp; Pasión</span>
+            </div>
+            <div class="p-3 rounded-2xl glass-card text-center">
+              <span class="block text-xl font-black text-gradient-gold font-heading">4+</span>
+              <span class="text-[10px] text-[#cca4ab] font-medium leading-tight">Proyectos Web</span>
+            </div>
+            <div class="p-3 rounded-2xl glass-card text-center">
+              <span class="block text-xl font-black text-gradient-gold font-heading">+120h</span>
+              <span class="text-[10px] text-[#cca4ab] font-medium leading-tight">Formación Técnica</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== SECCIÓN SOBRE MÍ ==================== -->
+  <section id="sobre-mi" class="relative z-10 py-16 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto space-y-10">
+      
+      <!-- Título de Sección -->
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] flex items-center justify-center gap-2">
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+          Conoce Mi Perfil
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+          Sobre <span class="text-gradient-gold">Mí</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-[#cca4ab] max-w-xl mx-auto">
+          Mi camino como desarrolladora web y el propósito que impulsa cada línea de código que escribo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Tarjeta de Historia / Biografía -->
+        <div class="md:col-span-7 glass-card p-6 sm:p-8 rounded-3xl space-y-4">
+          <div class="flex items-center gap-3 border-b border-[#d4af37]/20 pb-4">
+            <div class="w-10 h-10 rounded-xl bg-[#540c1a] border border-[#d4af37]/30 flex items-center justify-center text-[#d4af37]">
+              <i class="fa-solid fa-compass-drafting text-lg"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white font-heading">Mi Trayectoria en la Tecnología</h3>
+              <p class="text-xs text-[#d4af37]">Desarrolladora en constante evolución</p>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-[#e2cfd3] leading-relaxed">
+            ¡Hola! Soy <strong>Génesis Ríos</strong>, una entusiasta desarrolladora frontend radicada en Maynas, Perú. Mi pasión por la informática cobró vida a través del <strong>Programa Formativo +ChicasTec</strong>, una iniciativa respaldada por <em>UNICEF, Plan International y el CETPRO Padre Jesús García</em>, enfocada en cerrar la brecha de género en el sector tech.
+          </p>
+
+          <p class="text-xs sm:text-sm text-[#e2cfd3] leading-relaxed">
+            Durante mi formación me he especializado en la maquetación semántica con <strong>HTML5</strong>, diseño responsivo avanzado con <strong>CSS3 y Tailwind CSS</strong>, e interactividad con <strong>JavaScript moderno</strong>. Además, me apasiona la experiencia de usuario (UI/UX), utilizando herramientas como <strong>Figma</strong> para crear prototipos funcionales y visualmente memorables.
+          </p>
+
+          <p class="text-xs sm:text-sm text-[#e2cfd3] leading-relaxed">
+            Mi meta profesional es integrarme en equipos colaborativos de desarrollo donde pueda aportar innovación, resolver desafíos complejos y construir soluciones que generen un impacto positivo en la educación, la sostenibilidad y el empoderamiento comunitario.
+          </p>
+
+          <!-- Datos Rápidos -->
+          <div class="grid grid-cols-2 gap-3 pt-3">
+            <div class="p-3 rounded-xl bg-[#1d0408]/80 border border-[#d4af37]/20">
+              <span class="text-[10px] text-[#d4af37] uppercase font-bold block">Ubicación</span>
+              <span class="text-xs font-semibold text-white">Maynas, Loreto (Perú)</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#1d0408]/80 border border-[#d4af37]/20">
+              <span class="text-[10px] text-[#d4af37] uppercase font-bold block">Especialidad</span>
+              <span class="text-xs font-semibold text-white">Frontend &amp; Maquetación Web</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#1d0408]/80 border border-[#d4af37]/20">
+              <span class="text-[10px] text-[#d4af37] uppercase font-bold block">Idiomas</span>
+              <span class="text-xs font-semibold text-white">Español (Nativo)</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#1d0408]/80 border border-[#d4af37]/20">
+              <span class="text-[10px] text-[#d4af37] uppercase font-bold block">Modalidad</span>
+              <span class="text-xs font-semibold text-white">Remoto / Híbrido</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilares de Valor (4 Cards) -->
+        <div class="md:col-span-5 space-y-4">
+          
+          <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#540c1a] border border-[#d4af37]/40 flex-shrink-0 flex items-center justify-center text-[#d4af37]">
+              <i class="fa-solid fa-palette text-base"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white font-heading">Diseño Atractivo &amp; Profesional</h4>
+              <p class="text-xs text-[#cca4ab] mt-1 leading-snug">
+                Creación de interfaces que transmiten credibilidad, usando paletas armónicas, jerarquía visual y detalles refinados.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#540c1a] border border-[#d4af37]/40 flex-shrink-0 flex items-center justify-center text-[#d4af37]">
+              <i class="fa-solid fa-layer-group text-base"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white font-heading">Código Limpio y Semántico</h4>
+              <p class="text-xs text-[#cca4ab] mt-1 leading-snug">
+                Estructuración ordenada bajo estándares HTML5 y CSS moderno para favorecer la accesibilidad (a11y) y el SEO.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#540c1a] border border-[#d4af37]/40 flex-shrink-0 flex items-center justify-center text-[#d4af37]">
+              <i class="fa-solid fa-mobile-screen-button text-base"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white font-heading">Adaptabilidad Mobile-First</h4>
+              <p class="text-xs text-[#cca4ab] mt-1 leading-snug">
+                Experiencia fluida y optimizada tanto en smartphones como en tablets y pantallas de escritorio.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#540c1a] border border-[#d4af37]/40 flex-shrink-0 flex items-center justify-center text-[#d4af37]">
+              <i class="fa-solid fa-heart text-base"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white font-heading">Compromiso &amp; Impacto Social</h4>
+              <p class="text-xs text-[#cca4ab] mt-1 leading-snug">
+                Deseo de utilizar la tecnología para empoderar a la Amazonía y motivar a más mujeres a liderar en el mundo digital.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Mosaico Fotográfico: Entorno Creativo e Identidad -->
+      <div class="pt-6 border-t border-[#d4af37]/20 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-[#d4af37] uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-camera text-sm"></i>
+            Entorno Creativo &amp; Fuentes de Inspiración
+          </span>
+          <span class="text-[11px] text-[#cca4ab]">Génesis Ríos • Maynas</span>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+          
+          <!-- Foto 1: Programación Frontend -->
+          <div class="group relative rounded-2xl overflow-hidden h-44 sm:h-52 border border-[#d4af37]/30 shadow-lg">
+            <img 
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80" 
+              alt="Desarrollo Web Frontend y Código Limpio" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-[#1b0409]/40 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-[9px] font-extrabold text-[#d4af37] uppercase tracking-widest block">Frontend Core</span>
+              <p class="text-xs font-bold text-white leading-tight">Código &amp; Algoritmos</p>
+            </div>
+          </div>
+
+          <!-- Foto 2: Prototipado y Figma -->
+          <div class="group relative rounded-2xl overflow-hidden h-44 sm:h-52 border border-[#d4af37]/30 shadow-lg">
+            <img 
+              src="https://images.unsplash.com/photo-1581291518655-9523c93269c4?auto=format&fit=crop&w=700&q=80" 
+              alt="Diseño UI/UX y Wireframing" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-[#1b0409]/40 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-[9px] font-extrabold text-[#d4af37] uppercase tracking-widest block">UI/UX Design</span>
+              <p class="text-xs font-bold text-white leading-tight">Prototipos en Figma</p>
+            </div>
+          </div>
+
+          <!-- Foto 3: Comunidad +ChicasTec -->
+          <div class="group relative rounded-2xl overflow-hidden h-44 sm:h-52 border border-[#d4af37]/30 shadow-lg">
+            <img 
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80" 
+              alt="Comunidad y Trabajo en Equipo +ChicasTec" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-[#1b0409]/40 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-[9px] font-extrabold text-[#d4af37] uppercase tracking-widest block">Comunidad Tech</span>
+              <p class="text-xs font-bold text-white leading-tight">+ChicasTec Maynas</p>
+            </div>
+          </div>
+
+          <!-- Foto 4: Paisaje de la Amazonía Peruana -->
+          <div class="group relative rounded-2xl overflow-hidden h-44 sm:h-52 border border-[#d4af37]/30 shadow-lg">
+            <img 
+              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=700&q=80" 
+              alt="Inspiración en la Amazonía de Loreto" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-[#1b0409]/40 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-[9px] font-extrabold text-[#d4af37] uppercase tracking-widest block">Identidad Regional</span>
+              <p class="text-xs font-bold text-white leading-tight">Maynas, Loreto</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECCIÓN HABILIDADES ==================== -->
+  <section id="habilidades" class="relative z-10 py-16 px-4 sm:px-6 bg-[#160307]/60">
+    <div class="max-w-5xl mx-auto space-y-10">
+      
+      <!-- Título de Sección -->
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] flex items-center justify-center gap-2">
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+          Stack &amp; Competencias
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+          Mis <span class="text-gradient-gold">Habilidades</span> Técnicas
+        </h2>
+        <p class="text-xs sm:text-sm text-[#cca4ab] max-w-xl mx-auto">
+          Herramientas y tecnologías que domino para el desarrollo y diseño de interfaces web modernas.
+        </p>
+      </div>
+
+      <!-- Grid de Habilidades Técnicas -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- HTML5 -->
+        <div class="glass-card p-5 rounded-2xl text-center group space-y-3">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-[#380710] border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
+            <i class="fa-brands fa-html5 text-3xl"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white font-heading">HTML5 Semántico</h3>
+            <p class="text-[11px] text-[#cca4ab] mt-1">Estructura limpia, accesibilidad (a11y) y buenas prácticas SEO.</p>
+          </div>
+          <div class="w-full bg-[#20050a] h-1.5 rounded-full overflow-hidden border border-white/5">
+            <div class="bg-gradient-to-r from-orange-500 to-[#d4af37] h-full rounded-full w-[95%]"></div>
+          </div>
+          <span class="inline-block text-[10px] font-bold text-[#d4af37] bg-[#380710]/90 px-2.5 py-0.5 rounded-full">Avanzado</span>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="glass-card p-5 rounded-2xl text-center group space-y-3">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-[#380710] border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+            <i class="fa-brands fa-css3-alt text-3xl"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white font-heading">CSS3 Moderno</h3>
+            <p class="text-[11px] text-[#cca4ab] mt-1">Flexbox, CSS Grid, animaciones y diseño responsivo fluido.</p>
+          </div>
+          <div class="w-full bg-[#20050a] h-1.5 rounded-full overflow-hidden border border-white/5">
+            <div class="bg-gradient-to-r from-blue-500 to-[#d4af37] h-full rounded-full w-[90%]"></div>
+          </div>
+          <span class="inline-block text-[10px] font-bold text-[#d4af37] bg-[#380710]/90 px-2.5 py-0.5 rounded-full">Avanzado</span>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="glass-card p-5 rounded-2xl text-center group space-y-3">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-[#380710] border border-yellow-500/30 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
+            <i class="fa-brands fa-js text-3xl"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white font-heading">JavaScript ES6+</h3>
+            <p class="text-[11px] text-[#cca4ab] mt-1">Manipulación del DOM, eventos, funciones flecha y lógica interactiva.</p>
+          </div>
+          <div class="w-full bg-[#20050a] h-1.5 rounded-full overflow-hidden border border-white/5">
+            <div class="bg-gradient-to-r from-yellow-500 to-[#d4af37] h-full rounded-full w-[80%]"></div>
+          </div>
+          <span class="inline-block text-[10px] font-bold text-[#d4af37] bg-[#380710]/90 px-2.5 py-0.5 rounded-full">Intermedio</span>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div class="glass-card p-5 rounded-2xl text-center group space-y-3">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-[#380710] border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-wind text-3xl"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white font-heading">Tailwind CSS</h3>
+            <p class="text-[11px] text-[#cca4ab] mt-1">Maquetación ágil, componentes estilizados y configuraciones custom.</p>
+          </div>
+          <div class="w-full bg-[#20050a] h-1.5 rounded-full overflow-hidden border border-white/5">
+            <div class="bg-gradient-to-r from-cyan-500 to-[#d4af37] h-full rounded-full w-[88%]"></div>
+          </div>
+          <span class="inline-block text-[10px] font-bold text-[#d4af37] bg-[#380710]/90 px-2.5 py-0.5 rounded-full">Avanzado</span>
+        </div>
+
+      </div>
+
+      <!-- Segunda Fila: Herramientas, Diseño y Habilidades Blandas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+        
+        <!-- Caja 1: Diseño & Prototipado -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-[#540c1a] text-[#d4af37] flex items-center justify-center border border-[#d4af37]/30">
+              <i class="fa-brands fa-figma text-lg"></i>
+            </div>
+            <h4 class="text-sm font-bold text-white font-heading">Diseño &amp; Prototipado UI/UX</h4>
+          </div>
+          <ul class="space-y-2.5 text-xs text-[#e2cfd3]">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#d4af37] text-[11px]"></i>
+              <span>Prototipos interactivos en Figma</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#d4af37] text-[11px]"></i>
+              <span>Sistemas de Color y Tipografía Armónica</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#d4af37] text-[11px]"></i>
+              <span>Wireframing de Baja y Alta Fidelidad</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#d4af37] text-[11px]"></i>
+              <span>Diseño centrado en la usabilidad del usuario</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Caja 2: Herramientas de Desarrollo -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-[#540c1a] text-[#d4af37] flex items-center justify-center border border-[#d4af37]/30">
+              <i class="fa-solid fa-terminal text-sm"></i>
+            </div>
+            <h4 class="text-sm font-bold text-white font-heading">Herramientas &amp; Flujo de Trabajo</h4>
+          </div>
+          <ul class="space-y-2.5 text-xs text-[#e2cfd3]">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#d4af37] text-[11px]"></i>
+              <span>Control de Versiones con Git &amp; GitHub</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#d4af37] text-[11px]"></i>
+              <span>Visual Studio Code y extensiones clave</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#d4af37] text-[11px]"></i>
+              <span>Depuración con Chrome DevTools</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#d4af37] text-[11px]"></i>
+              <span>Despliegues en GitHub Pages y Vercel</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Caja 3: Habilidades Blandas / Soft Skills -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-[#540c1a] text-[#d4af37] flex items-center justify-center border border-[#d4af37]/30">
+              <i class="fa-solid fa-lightbulb text-base"></i>
+            </div>
+            <h4 class="text-sm font-bold text-white font-heading">Competencias &amp; Metodología</h4>
+          </div>
+          <ul class="space-y-2.5 text-xs text-[#e2cfd3]">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-star text-[#d4af37] text-[11px]"></i>
+              <span>Trabajo en equipo y empatía comunicativa</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-star text-[#d4af37] text-[11px]"></i>
+              <span>Atención minuciosa al detalle visual</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-star text-[#d4af37] text-[11px]"></i>
+              <span>Aprendizaje ágil y pensamiento crítico</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-star text-[#d4af37] text-[11px]"></i>
+              <span>Responsabilidad y entrega orientada a metas</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECCIÓN PROYECTOS ==================== -->
+  <section id="proyectos" class="relative z-10 py-16 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto space-y-10">
+      
+      <!-- Título de Sección -->
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] flex items-center justify-center gap-2">
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+          Showcase de Trabajo
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+          Mis Proyectos <span class="text-gradient-gold">Destacados</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-[#cca4ab] max-w-xl mx-auto">
+          Soluciones digitales diseñadas y programadas con dedicación durante mi formación en +ChicasTec.
+        </p>
+      </div>
+
+      <!-- Grid de Proyectos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Proyecto 1: Maynas Conectada -->
+        <div class="glass-card rounded-3xl overflow-hidden group flex flex-col justify-between border border-[#d4af37]/25 hover:border-[#d4af37]/60">
+          <div class="relative h-56 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80" 
+              alt="Proyecto Maynas Conectada" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-[#540c1a]/90 text-[#f8ecb3] border border-[#d4af37]/40 shadow-sm">
+                <i class="fa-solid fa-leaf text-[#d4af37] mr-1"></i> Ecoturismo &amp; Cultura
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold text-[#d4af37] tracking-wider uppercase">Proyecto Integrador Regional</span>
+                <span class="text-xs text-[#cca4ab]">2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Amazonía Viva • Maynas Conectada
+              </h3>
+              <p class="text-xs text-[#d8c2c6] leading-relaxed">
+                Plataforma interactiva para la difusión turística sostenible y el impulso de artesanas locales en Loreto. Cuenta con galería dinámica, filtros por comunidad y navegación totalmente responsiva.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">HTML5</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">CSS3 Grid</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">JavaScript</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">Figma</span>
+              </div>
+
+              <div class="flex items-center gap-3 pt-1 border-t border-white/10">
+                <a href="#contacto" class="btn-gold flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5">
+                  <i class="fa-solid fa-eye text-[11px]"></i>
+                  <span>Ver Demo</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-[#2a060e] hover:bg-[#540c1a] border border-[#d4af37]/30 text-white text-xs font-bold flex items-center gap-1.5 transition-colors">
+                  <i class="fa-brands fa-github text-[#d4af37]"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2: Kallpa Store -->
+        <div class="glass-card rounded-3xl overflow-hidden group flex flex-col justify-between border border-[#d4af37]/25 hover:border-[#d4af37]/60">
+          <div class="relative h-56 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=800&q=80" 
+              alt="Proyecto Kallpa Store Artesanías" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-[#540c1a]/90 text-[#f8ecb3] border border-[#d4af37]/40 shadow-sm">
+                <i class="fa-solid fa-bag-shopping text-[#d4af37] mr-1"></i> E-Commerce
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold text-[#d4af37] tracking-wider uppercase">Tienda Virtual Responsiva</span>
+                <span class="text-xs text-[#cca4ab]">2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Kallpa • Artesanías &amp; Moda Local
+              </h3>
+              <p class="text-xs text-[#d8c2c6] leading-relaxed">
+                Catálogo web para emprendedoras con carrito de compras reactivo en JavaScript, cálculo de subtotales dinámico y sistema de pedidos directos vía WhatsApp.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">JavaScript DOM</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">LocalStorage</span>
+              </div>
+
+              <div class="flex items-center gap-3 pt-1 border-t border-white/10">
+                <a href="#contacto" class="btn-gold flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5">
+                  <i class="fa-solid fa-eye text-[11px]"></i>
+                  <span>Ver Demo</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-[#2a060e] hover:bg-[#540c1a] border border-[#d4af37]/30 text-white text-xs font-bold flex items-center gap-1.5 transition-colors">
+                  <i class="fa-brands fa-github text-[#d4af37]"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3: Portafolio Personal Deluxe -->
+        <div class="glass-card rounded-3xl overflow-hidden group flex flex-col justify-between border border-[#d4af37]/25 hover:border-[#d4af37]/60">
+          <div class="relative h-56 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" 
+              alt="Proyecto Portafolio Personal y Código" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-[#540c1a]/90 text-[#f8ecb3] border border-[#d4af37]/40 shadow-sm">
+                <i class="fa-solid fa-crown text-[#d4af37] mr-1"></i> Marca Personal
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold text-[#d4af37] tracking-wider uppercase">Diseño de Alta Gama</span>
+                <span class="text-xs text-[#cca4ab]">2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Génesis Ríos • Deluxe Showcase
+              </h3>
+              <p class="text-xs text-[#d8c2c6] leading-relaxed">
+                Sitio web de presentación personal rediseñado con paleta Rojo Vino &amp; Oro Metálico, microinteracciones CSS, estructura modular y máxima calificación en velocidad y accesibilidad.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">HTML5 Semántico</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">Glassmorphism</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">Tailwind CSS</span>
+              </div>
+
+              <div class="flex items-center gap-3 pt-1 border-t border-white/10">
+                <a href="#inicio" class="btn-gold flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5">
+                  <i class="fa-solid fa-check text-[11px]"></i>
+                  <span>Página Actual</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-[#2a060e] hover:bg-[#540c1a] border border-[#d4af37]/30 text-white text-xs font-bold flex items-center gap-1.5 transition-colors">
+                  <i class="fa-brands fa-github text-[#d4af37]"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 4: EcoHuella Amazonía -->
+        <div class="glass-card rounded-3xl overflow-hidden group flex flex-col justify-between border border-[#d4af37]/25 hover:border-[#d4af37]/60">
+          <div class="relative h-56 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" 
+              alt="Proyecto EcoHuella Verde y Sostenibilidad" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-[#540c1a]/90 text-[#f8ecb3] border border-[#d4af37]/40 shadow-sm">
+                <i class="fa-solid fa-tree text-[#d4af37] mr-1"></i> Sostenibilidad
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold text-[#d4af37] tracking-wider uppercase">Herramienta Interactiva</span>
+                <span class="text-xs text-[#cca4ab]">2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                EcoHuella • Calculadora Verde
+              </h3>
+              <p class="text-xs text-[#d8c2c6] leading-relaxed">
+                Aplicación interactiva que permite a las familias evaluar sus hábitos de consumo y recibir recomendaciones personalizadas para proteger el ecosistema amazónico.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">JavaScript Vanilla</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">CSS Custom Props</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[#380710] text-[#f8ecb3] border border-[#d4af37]/20">Gráficos UI</span>
+              </div>
+
+              <div class="flex items-center gap-3 pt-1 border-t border-white/10">
+                <a href="#contacto" class="btn-gold flex-1 py-2 px-3 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5">
+                  <i class="fa-solid fa-eye text-[11px]"></i>
+                  <span>Ver Demo</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-[#2a060e] hover:bg-[#540c1a] border border-[#d4af37]/30 text-white text-xs font-bold flex items-center gap-1.5 transition-colors">
+                  <i class="fa-brands fa-github text-[#d4af37]"></i>
+                  <span>Código</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECCIÓN GALERÍA DE EXPERIENCIAS ==================== -->
+  <section id="galeria" class="relative z-10 py-16 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto space-y-10">
+      
+      <!-- Título de Sección -->
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] flex items-center justify-center gap-2">
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+          Momentos &amp; Entorno Creativo
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+          Mi Experiencia en <span class="text-gradient-gold">+ChicasTec</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-[#cca4ab] max-w-xl mx-auto">
+          Imágenes que capturan el espíritu de colaboración, aprendizaje tecnológico y la identidad que inspira mis proyectos.
+        </p>
+      </div>
+
+      <!-- Grid de Galería -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Tarjeta 1: Talleres de Programación -->
+        <div class="glass-card rounded-2xl overflow-hidden group border border-[#d4af37]/25 hover:border-[#d4af37]/60 transition-all flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80" 
+              alt="Talleres de Código Frontend" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold bg-[#380710]/90 text-[#f8ecb3] border border-[#d4af37]/30">
+              <i class="fa-solid fa-code text-[#d4af37] mr-1"></i> Talleres en Vivo
+            </span>
+          </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Sesiones Intensivas de Código
+              </h3>
+              <p class="text-xs text-[#cca4ab] leading-relaxed mt-1">
+                Horas dedicadas a estructurar maquetaciones semánticas, dominar Flexbox/Grid y depurar algoritmos con JavaScript.
+              </p>
+            </div>
+            <span class="text-[11px] font-semibold text-[#d4af37] pt-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-laptop-code text-[10px]"></i> Práctica Constante
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Diseño UI/UX y Wireframing -->
+        <div class="glass-card rounded-2xl overflow-hidden group border border-[#d4af37]/25 hover:border-[#d4af37]/60 transition-all flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=700&q=80" 
+              alt="Diseño de Interfaces UI/UX" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold bg-[#380710]/90 text-[#f8ecb3] border border-[#d4af37]/30">
+              <i class="fa-solid fa-pen-nib text-[#d4af37] mr-1"></i> Prototipado
+            </span>
+          </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Ideación Visual y UX Design
+              </h3>
+              <p class="text-xs text-[#cca4ab] leading-relaxed mt-1">
+                Diseño de wireframes interactivos en Figma, seleccionando combinaciones tipográficas y paletas que cautiven al usuario.
+              </p>
+            </div>
+            <span class="text-[11px] font-semibold text-[#d4af37] pt-2 flex items-center gap-1.5">
+              <i class="fa-brands fa-figma text-[10px]"></i> Diseño Centrado en Personas
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Trabajo Colaborativo -->
+        <div class="glass-card rounded-2xl overflow-hidden group border border-[#d4af37]/25 hover:border-[#d4af37]/60 transition-all flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=700&q=80" 
+              alt="Compañerismo y Equipo" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold bg-[#380710]/90 text-[#f8ecb3] border border-[#d4af37]/30">
+              <i class="fa-solid fa-users text-[#d4af37] mr-1"></i> Comunidad
+            </span>
+          </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Poder Femenino en Tecnología
+              </h3>
+              <p class="text-xs text-[#cca4ab] leading-relaxed mt-1">
+                Creciendo junto a mis compañeras de Maynas, compartiendo retroalimentación constructiva y resolviendo dudas técnicas en equipo.
+              </p>
+            </div>
+            <span class="text-[11px] font-semibold text-[#d4af37] pt-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-heart text-[10px]"></i> Liderazgo &amp; Empatía
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Naturaleza e Inspiración Loreto -->
+        <div class="glass-card rounded-2xl overflow-hidden group border border-[#d4af37]/25 hover:border-[#d4af37]/60 transition-all flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=700&q=80" 
+              alt="Amazonía y Selva Peruana" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold bg-[#380710]/90 text-[#f8ecb3] border border-[#d4af37]/30">
+              <i class="fa-solid fa-mountain-sun text-[#d4af37] mr-1"></i> Inspiración
+            </span>
+          </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Raíces Amazónicas
+              </h3>
+              <p class="text-xs text-[#cca4ab] leading-relaxed mt-1">
+                La riqueza ecológica, los ríos y los colores vibrantes de Loreto guían mi sensibilidad visual y mi compromiso con el desarrollo sostenible.
+              </p>
+            </div>
+            <span class="text-[11px] font-semibold text-[#d4af37] pt-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-tree text-[10px]"></i> Maynas, Loreto
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5: Demo Day y Presentaciones -->
+        <div class="glass-card rounded-2xl overflow-hidden group border border-[#d4af37]/25 hover:border-[#d4af37]/60 transition-all flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80" 
+              alt="Sustentación de Proyectos Web" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold bg-[#380710]/90 text-[#f8ecb3] border border-[#d4af37]/30">
+              <i class="fa-solid fa-bullhorn text-[#d4af37] mr-1"></i> Demo Day
+            </span>
+          </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Presentación de Proyectos
+              </h3>
+              <p class="text-xs text-[#cca4ab] leading-relaxed mt-1">
+                Defensa de interfaces ante mentores y aliados estratégicos (UNICEF, Plan International y CETPRO Padre Jesús García).
+              </p>
+            </div>
+            <span class="text-[11px] font-semibold text-[#d4af37] pt-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-award text-[10px]"></i> Impacto Real
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 6: Tecnologías y Flujo Moderno -->
+        <div class="glass-card rounded-2xl overflow-hidden group border border-[#d4af37]/25 hover:border-[#d4af37]/60 transition-all flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#20050a]">
+            <img 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" 
+              alt="Desarrollo de Software y Diseño Web" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1b0409] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold bg-[#380710]/90 text-[#f8ecb3] border border-[#d4af37]/30">
+              <i class="fa-solid fa-laptop text-[#d4af37] mr-1"></i> Modern Stack
+            </span>
+          </div>
+          <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white font-heading group-hover:text-[#f8ecb3] transition-colors">
+                Flujo de Desarrollo Frontend
+              </h3>
+              <p class="text-xs text-[#cca4ab] leading-relaxed mt-1">
+                Uso de Visual Studio Code, Git, GitHub y Tailwind CSS para crear productos digitales limpios y escalables.
+              </p>
+            </div>
+            <span class="text-[11px] font-semibold text-[#d4af37] pt-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-check-double text-[10px]"></i> Buenas Prácticas
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECCIÓN TRAYECTORIA Y FORMACIÓN ==================== -->
+  <section id="trayectoria" class="relative z-10 py-16 px-4 sm:px-6 bg-[#160307]/60">
+    <div class="max-w-4xl mx-auto space-y-10">
+      
+      <!-- Título de Sección -->
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] flex items-center justify-center gap-2">
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+          Educación &amp; Hitos
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+          Formación &amp; <span class="text-gradient-gold">Reconocimientos</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-[#cca4ab] max-w-xl mx-auto">
+          Un recorrido continuo de dedicación, práctica intensiva y aprendizaje guiado por expertos.
+        </p>
+      </div>
+
+      <!-- Imagen Destacada de Graduación / Generación +ChicasTec -->
+      <div class="relative rounded-3xl overflow-hidden border border-[#d4af37]/35 shadow-[0_10px_35px_rgba(0,0,0,0.6)] group">
+        <div class="h-64 sm:h-72 w-full relative">
+          <img 
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" 
+            alt="Graduación y Formación de Estudiantes en Tecnología" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#150206] via-[#150206]/50 to-transparent"></div>
+          
+          <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+            <div class="space-y-1">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-[#540c1a]/90 text-[#f8ecb3] border border-[#d4af37]/40 shadow-sm">
+                <i class="fa-solid fa-graduation-cap text-[#d4af37]"></i>
+                Hito Formativo
+              </span>
+              <h3 class="text-xl sm:text-2xl font-black font-heading text-white">
+                Generación de Mujeres Líderes en Tecnología
+              </h3>
+              <p class="text-xs sm:text-sm text-[#e2cfd3] max-w-lg leading-relaxed">
+                Programa Formativo +ChicasTec en Maynas, impulsando el futuro digital y la inclusión de más mujeres en la Amazonía peruana.
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1.5 rounded-xl bg-[#20050a]/90 border border-[#d4af37]/40 text-xs font-bold text-[#d4af37] flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-certificate"></i> Certificación Oficial
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea de Tiempo -->
+      <div class="relative border-l-2 border-[#d4af37]/40 ml-4 sm:ml-8 pl-6 sm:pl-8 space-y-8">
+        
+        <!-- Hito 1 -->
+        <div class="relative group">
+          <!-- Punto de la línea de tiempo -->
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#d4af37] border-4 border-[#120205] shadow-[0_0_10px_#d4af37]"></div>
+          
+          <div class="glass-card p-6 rounded-2xl space-y-2">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="text-base sm:text-lg font-bold text-white font-heading">
+                Graduada del Programa Formativo +ChicasTec
+              </h3>
+              <span class="text-xs font-bold text-[#d4af37] px-2.5 py-0.5 rounded-full bg-[#380710] border border-[#d4af37]/30">
+                Maynas, Loreto
+              </span>
+            </div>
+            <p class="text-xs font-semibold text-[#f8ecb3]">
+              CETPRO Padre Jesús García • Plan International • UNICEF
+            </p>
+            <p class="text-xs text-[#cca4ab] leading-relaxed pt-1">
+              Capacitación intensiva en desarrollo web frontend, maquetación semántica moderna, accesibilidad, lógica en JavaScript y diseño UI/UX centrado en el usuario.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hito 2 -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#781326] border-4 border-[#120205] group-hover:bg-[#d4af37] transition-colors"></div>
+          
+          <div class="glass-card p-6 rounded-2xl space-y-2">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="text-base sm:text-lg font-bold text-white font-heading">
+                Especialización Práctica en Maquetación &amp; Tailwind CSS
+              </h3>
+              <span class="text-xs font-bold text-[#cca4ab]">Taller Práctico</span>
+            </div>
+            <p class="text-xs font-semibold text-[#f8ecb3]">
+              Proyectos Integradores de Código Abierto
+            </p>
+            <p class="text-xs text-[#cca4ab] leading-relaxed pt-1">
+              Desarrollo de sitios webs responsivos, optimización de hojas de estilo, microinteracciones con CSS y despliegue continuo en entornos de producción.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hito 3 -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#781326] border-4 border-[#120205] group-hover:bg-[#d4af37] transition-colors"></div>
+          
+          <div class="glass-card p-6 rounded-2xl space-y-2">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="text-base sm:text-lg font-bold text-white font-heading">
+                Prototipado Ágil &amp; Wireframing en Figma
+              </h3>
+              <span class="text-xs font-bold text-[#cca4ab]">UI/UX Design</span>
+            </div>
+            <p class="text-xs font-semibold text-[#f8ecb3]">
+              Diseño de Experiencias Digitales
+            </p>
+            <p class="text-xs text-[#cca4ab] leading-relaxed pt-1">
+              Creación de mockups de alta fidelidad, paletas de color con alta legibilidad, pruebas de usabilidad y diseño responsivo para dispositivos móviles.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Alianzas y Organizaciones Aliadas -->
+      <div class="pt-6 border-t border-[#d4af37]/20 text-center space-y-4">
+        <p class="text-xs font-semibold tracking-wider text-[#d4af37] uppercase">
+          Programa Respaldado Por
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-8 opacity-80 hover:opacity-100 transition-opacity">
+          <div class="bg-white/90 p-2.5 rounded-xl border border-[#d4af37]/40 shadow-sm flex items-center justify-center h-14 w-32 hover:scale-105 transition-transform">
+            <img src="../../logo/CETPRO PJG.png" alt="CETPRO Padre Jesús García" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="bg-white/90 p-2.5 rounded-xl border border-[#d4af37]/40 shadow-sm flex items-center justify-center h-14 w-32 hover:scale-105 transition-transform">
+            <img src="../../logo/PLAN INTERNACIONAL.png" alt="Plan International" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="bg-white/90 p-2.5 rounded-xl border border-[#d4af37]/40 shadow-sm flex items-center justify-center h-14 w-32 hover:scale-105 transition-transform">
+            <img src="../../logo/UNICEF.png" alt="UNICEF" class="max-h-full max-w-full object-contain" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECCIÓN CONTACTO ==================== -->
+  <section id="contacto" class="relative z-10 py-16 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto space-y-10">
+      
+      <!-- Título de Sección -->
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#d4af37] flex items-center justify-center gap-2">
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+          Conectemos
+          <span class="h-px w-8 bg-[#d4af37]/60"></span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+          ¿Tienes una Idea o Proyecto? <span class="text-gradient-gold">Hablemos</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-[#cca4ab] max-w-xl mx-auto">
+          Estoy disponible para prácticas preprofesionales, desarrollo de sitios web freelance y proyectos colaborativos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Información Directa de Contacto -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- Tarjeta Correo -->
+          <div class="glass-card p-5 rounded-2xl flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl bg-[#540c1a] border border-[#d4af37]/40 flex items-center justify-center text-[#d4af37] text-lg group-hover:scale-110 transition-transform flex-shrink-0">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[10px] text-[#d4af37] font-bold uppercase tracking-wider block">Correo Electrónico</span>
+              <a href="mailto:genesis.rios@ejemplo.com" class="text-sm font-semibold text-white hover:text-[#f8ecb3] transition-colors truncate block">
+                genesis.rios@ejemplo.com
+              </a>
+            </div>
+            <button onclick="copiarEmail()" class="text-xs text-[#d4af37] hover:text-white px-2.5 py-1.5 rounded-lg bg-[#380710] border border-[#d4af37]/30 transition-colors" title="Copiar correo">
+              <i class="fa-solid fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- Tarjeta WhatsApp / Teléfono -->
+          <div class="glass-card p-5 rounded-2xl flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl bg-[#540c1a] border border-[#d4af37]/40 flex items-center justify-center text-[#d4af37] text-lg group-hover:scale-110 transition-transform flex-shrink-0">
+              <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[10px] text-[#d4af37] font-bold uppercase tracking-wider block">WhatsApp Directo</span>
+              <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-[#f8ecb3] transition-colors truncate block">
+                +51 900 000 000
+              </a>
+            </div>
+            <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-300 hover:text-white px-2.5 py-1.5 rounded-lg bg-emerald-950/70 border border-emerald-500/40 transition-colors">
+              Chatear
+            </a>
+          </div>
+
+          <!-- Tarjeta Ubicación -->
+          <div class="glass-card p-5 rounded-2xl flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl bg-[#540c1a] border border-[#d4af37]/40 flex items-center justify-center text-[#d4af37] text-lg group-hover:scale-110 transition-transform flex-shrink-0">
+              <i class="fa-solid fa-map-pin"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[10px] text-[#d4af37] font-bold uppercase tracking-wider block">Ubicación</span>
+              <p class="text-sm font-semibold text-white">
+                Maynas, Región Loreto • Perú
+              </p>
+            </div>
+          </div>
+
+          <!-- Tarjeta Redes Sociales -->
+          <div class="glass-card p-5 rounded-2xl space-y-3">
+            <span class="text-[11px] text-[#d4af37] font-bold uppercase tracking-wider block">
+              Redes Profesionales
+            </span>
+            <div class="flex items-center gap-3">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex-1 p-2.5 rounded-xl bg-[#380710] hover:bg-[#540c1a] border border-[#d4af37]/30 text-center text-xs font-bold text-white flex items-center justify-center gap-2 transition-all">
+                <i class="fa-brands fa-github text-[#d4af37]"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex-1 p-2.5 rounded-xl bg-[#380710] hover:bg-[#540c1a] border border-[#d4af37]/30 text-center text-xs font-bold text-white flex items-center justify-center gap-2 transition-all">
+                <i class="fa-brands fa-linkedin-in text-[#d4af37]"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Formulario de Mensaje -->
+        <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-3xl border border-[#d4af37]/30 space-y-5">
+          <div>
+            <h3 class="text-lg font-bold text-white font-heading">Envíame un Mensaje</h3>
+            <p class="text-xs text-[#cca4ab] mt-1">Completa el formulario y te responderé a la brevedad posible.</p>
+          </div>
+
+          <form id="contact-form" onsubmit="enviarMensaje(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label for="nombre" class="text-xs font-semibold text-[#f8ecb3]">Nombre Completo</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#d4af37] text-xs">
+                    <i class="fa-solid fa-user"></i>
+                  </span>
+                  <input 
+                    type="text" 
+                    id="nombre" 
+                    required 
+                    placeholder="Tu nombre" 
+                    class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-[#1d0408] border border-[#d4af37]/30 text-white placeholder-[#8d5e68] text-xs focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="correo" class="text-xs font-semibold text-[#f8ecb3]">Correo Electrónico</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#d4af37] text-xs">
+                    <i class="fa-solid fa-at"></i>
+                  </span>
+                  <input 
+                    type="email" 
+                    id="correo" 
+                    required 
+                    placeholder="tunombre@ejemplo.com" 
+                    class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-[#1d0408] border border-[#d4af37]/30 text-white placeholder-[#8d5e68] text-xs focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="asunto" class="text-xs font-semibold text-[#f8ecb3]">Asunto / Motivo</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#d4af37] text-xs">
+                  <i class="fa-solid fa-tag"></i>
+                </span>
+                <input 
+                  type="text" 
+                  id="asunto" 
+                  required 
+                  placeholder="Ej. Oportunidad laboral / Propuesta de proyecto" 
+                  class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-[#1d0408] border border-[#d4af37]/30 text-white placeholder-[#8d5e68] text-xs focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="mensaje" class="text-xs font-semibold text-[#f8ecb3]">Tu Mensaje</label>
+              <textarea 
+                id="mensaje" 
+                rows="4" 
+                required 
+                placeholder="Cuéntame sobre tu proyecto o cómo podemos colaborar..." 
+                class="w-full p-3.5 rounded-xl bg-[#1d0408] border border-[#d4af37]/30 text-white placeholder-[#8d5e68] text-xs focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full btn-gold py-3 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <i class="fa-solid fa-paper-plane text-xs"></i>
+              <span>Enviar Mensaje a Génesis</span>
+            </button>
+
+            <div id="form-feedback" class="hidden p-3 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-xs text-center font-medium">
+              <i class="fa-solid fa-circle-check mr-1.5 text-emerald-400"></i>
+              ¡Gracias por tu mensaje! Me pondré en contacto contigo muy pronto.
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="relative z-10 border-t border-[#d4af37]/20 bg-[#0d0103] py-12 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      
+      <!-- Marca en Footer -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#540c1a] to-[#d4af37] p-[1.5px]">
+          <div class="w-full h-full bg-[#1e050a] rounded-[10px] flex items-center justify-center">
+            <span class="font-serif font-black text-sm text-gradient-gold">GR</span>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-white font-heading">Génesis Ríos</p>
+          <p class="text-[11px] text-[#cca4ab]">Frontend Developer Jr. • Maynas, Loreto</p>
+        </div>
+      </div>
+
+      <!-- Enlaces Rápidos -->
+      <div class="flex flex-wrap items-center justify-center gap-5 text-xs text-[#cca4ab]">
+        <a href="#inicio" class="hover:text-[#d4af37] transition-colors">Inicio</a>
+        <a href="#sobre-mi" class="hover:text-[#d4af37] transition-colors">Sobre Mí</a>
+        <a href="#habilidades" class="hover:text-[#d4af37] transition-colors">Habilidades</a>
+        <a href="#proyectos" class="hover:text-[#d4af37] transition-colors">Proyectos</a>
+        <a href="#galeria" class="hover:text-[#d4af37] transition-colors">Galería</a>
+        <a href="#trayectoria" class="hover:text-[#d4af37] transition-colors">Trayectoria</a>
+        <a href="../../index.html" class="text-[#d4af37] hover:underline font-bold">Volver al Taller</a>
+      </div>
+
+      <!-- Botón Subir -->
+      <div>
+        <a href="#inicio" class="w-9 h-9 rounded-xl bg-[#2a060e] border border-[#d4af37]/30 text-[#d4af37] hover:bg-[#540c1a] hover:border-[#d4af37] inline-flex items-center justify-center transition-all" title="Ir arriba">
+          <i class="fa-solid fa-arrow-up text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="max-w-5xl mx-auto mt-8 pt-6 border-t border-white/5 text-center text-[11px] text-[#a57a82]">
+      &copy; 2024 - 2026 <strong>Génesis Ríos</strong> • Diseñado con elegancia en Rojo Vino &amp; Dorado para el <strong>Programa Formativo +ChicasTec</strong>. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Toast de Notificación -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none px-4 py-3 rounded-2xl bg-[#380710] border border-[#d4af37] shadow-[0_10px_30px_rgba(0,0,0,0.8)] text-white text-xs flex items-center gap-3">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+    <span id="toast-message">Correo copiado al portapapeles</span>
+  </div>
+
+  <!-- Scripts Interactivos -->
+  <script>
+    // Toggle Menú Móvil
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Cerrar menú al hacer clic en un enlace
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Función para mostrar Toast
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = message;
+        toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        
+        setTimeout(() => {
+          toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 3000);
+      }
+    }
+
+    // Copiar Correo
+    function copiarEmail() {
+      const email = 'genesis.rios@ejemplo.com';
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('¡Correo de Génesis copiado al portapapeles!');
+      }).catch(() => {
+        showToast('genesis.rios@ejemplo.com');
+      });
+    }
+
+    // Simulación de Envío de Formulario de Contacto
+    function enviarMensaje(event) {
+      event.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      const form = document.getElementById('contact-form');
+      
+      if (feedback) {
+        feedback.classList.remove('hidden');
+        form.reset();
+        showToast('¡Mensaje enviado con éxito a Génesis Ríos!');
+        setTimeout(() => {
+          feedback.classList.add('hidden');
+        }, 6000);
+      }
+    }
+  </script>
+
+</body>
+</html>

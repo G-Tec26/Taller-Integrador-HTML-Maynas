@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgShop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a060e" />
+      <stop offset="50%" stop-color="#3d0914" />
+      <stop offset="100%" stop-color="#150206" />
+    </linearGradient>
+    <linearGradient id="goldBag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2be" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#936e1f" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgShop)" />
+
+  <!-- Bolsa de Compras Dorada de Lujo -->
+  <g transform="translate(140, 80)">
+    <!-- Asas de la bolsa -->
+    <path d="M70 70 C70 10, 150 10, 150 70" fill="none" stroke="url(#goldBag)" stroke-width="8" stroke-linecap="round" />
+    
+    <!-- Cuerpo de la bolsa con patrón geométrico peruano -->
+    <polygon points="20,70 200,70 220,320 0,320" fill="#540c1a" stroke="url(#goldBag)" stroke-width="3" />
+    
+    <!-- Patrón textil andino / amazónico en la bolsa -->
+    <g fill="none" stroke="#d4af37" stroke-width="3">
+      <path d="M20 160 L40 140 L60 160 L80 140 L100 160 L120 140 L140 160 L160 140 L180 160 L200 140" />
+      <path d="M20 180 L40 160 L60 180 L80 160 L100 180 L120 160 L140 180 L160 160 L180 180 L200 160" />
+    </g>
+
+    <!-- Logo Kallpa en la bolsa -->
+    <circle cx="110" cy="235" r="32" fill="#1e0409" stroke="url(#goldBag)" stroke-width="2" />
+    <text x="110" y="242" font-family="'Outfit', sans-serif" font-size="14" font-weight="900" fill="#fff2be" text-anchor="middle">KALLPA</text>
+  </g>
+
+  <!-- Tarjetas de Producto E-commerce al Lado -->
+  <g transform="translate(420, 70)">
+    <!-- Tarjeta 1 -->
+    <rect width="320" height="150" rx="16" fill="#1b0307" stroke="#d4af37" stroke-width="1.5" />
+    <rect x="15" y="15" width="100" height="120" rx="10" fill="#540c1a" />
+    <!-- Icono de artesanía -->
+    <text x="65" y="80" font-size="40" text-anchor="middle">🏺</text>
+    <text x="135" y="45" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#ffffff">Cerámica Tradicional</text>
+    <text x="135" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#cca4ab">Hecho a mano en Maynas</text>
+    <text x="135" y="105" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#d4af37">S/. 65.00</text>
+    <rect x="230" y="90" width="75" height="28" rx="8" fill="url(#goldBag)" />
+    <text x="267" y="108" font-family="'Outfit', sans-serif" font-size="10" font-weight="800" fill="#140205" text-anchor="middle">Agregar</text>
+
+    <!-- Tarjeta 2 -->
+    <g transform="translate(0, 170)">
+      <rect width="320" height="150" rx="16" fill="#1b0307" stroke="#d4af37" stroke-width="1.5" />
+      <rect x="15" y="15" width="100" height="120" rx="10" fill="#540c1a" />
+      <text x="65" y="80" font-size="40" text-anchor="middle">🧵</text>
+      <text x="135" y="45" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#ffffff">Tejidos de Chambira</text>
+      <text x="135" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#cca4ab">Fibra natural de la selva</text>
+      <text x="135" y="105" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#d4af37">S/. 48.00</text>
+      <rect x="230" y="90" width="75" height="28" rx="8" fill="url(#goldBag)" />
+      <text x="267" y="108" font-family="'Outfit', sans-serif" font-size="10" font-weight="800" fill="#140205" text-anchor="middle">Agregar</text>
+    </g>
+  </g>
+
+  <!-- Carrito flotante en la esquina -->
+  <g transform="translate(680, 20)">
+    <circle cx="30" cy="30" r="26" fill="#781326" stroke="#d4af37" stroke-width="2" />
+    <text x="30" y="36" font-size="18" text-anchor="middle">🛒</text>
+    <circle cx="48" cy="14" r="10" fill="#d4af37" />
+    <text x="48" y="18" font-family="'Outfit', sans-serif" font-size="10" font-weight="900" fill="#140205" text-anchor="middle">3</text>
+  </g>
+</svg>

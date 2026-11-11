@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgWine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#380710" />
+      <stop offset="50%" stop-color="#540c1a" />
+      <stop offset="100%" stop-color="#1a0307" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2be" />
+      <stop offset="40%" stop-color="#d4af37" />
+      <stop offset="70%" stop-color="#f6e59c" />
+      <stop offset="100%" stop-color="#936e1f" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8b99c" />
+      <stop offset="100%" stop-color="#c98a69" />
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b1419" />
+      <stop offset="100%" stop-color="#140609" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Fondo Circular -->
+  <rect width="500" height="500" fill="url(#bgWine)" />
+  
+  <!-- Patrón de fondo geométrico sutil -->
+  <circle cx="250" cy="250" r="230" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.4" />
+  <circle cx="250" cy="250" r="200" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.3" />
+
+  <!-- Cabello posterior -->
+  <path d="M140 260 C120 350, 150 440, 180 480 L320 480 C350 440, 380 350, 360 260 Z" fill="url(#hairGrad)" />
+
+  <!-- Hombros y Vestimenta -->
+  <path d="M130 500 C150 420, 200 390, 250 390 C300 390, 350 420, 370 500 Z" fill="#781326" stroke="url(#goldGrad)" stroke-width="3" />
+  <!-- Cuello dorado / Collar -->
+  <path d="M210 395 C230 425, 270 425, 290 395" fill="none" stroke="url(#goldGrad)" stroke-width="5" />
+
+  <!-- Cuello -->
+  <rect x="225" y="320" width="50" height="80" rx="10" fill="url(#skinGrad)" />
+
+  <!-- Cabeza y Rostro -->
+  <ellipse cx="250" cy="245" rx="75" ry="95" fill="url(#skinGrad)" />
+
+  <!-- Cabello frontal con ondas elegantes -->
+  <path d="M175 220 C175 140, 325 140, 325 220 C325 200, 290 170, 250 170 C210 170, 175 200, 175 220 Z" fill="url(#hairGrad)" />
+  <path d="M175 220 C170 280, 180 340, 200 370 C190 320, 190 260, 205 230 Z" fill="url(#hairGrad)" />
+  <path d="M325 220 C330 280, 320 340, 300 370 C310 320, 310 260, 295 230 Z" fill="url(#hairGrad)" />
+
+  <!-- Ojos estilizados -->
+  <ellipse cx="220" cy="245" rx="9" ry="6" fill="#20050a" />
+  <ellipse cx="280" cy="245" rx="9" ry="6" fill="#20050a" />
+  <circle cx="222" cy="243" r="2.5" fill="#ffffff" />
+  <circle cx="282" cy="243" r="2.5" fill="#ffffff" />
+  <!-- Pestañas -->
+  <path d="M210 240 Q220 235 230 240" stroke="#20050a" stroke-width="2.5" fill="none" />
+  <path d="M270 240 Q280 235 290 240" stroke="#20050a" stroke-width="2.5" fill="none" />
+  <!-- Cejas finas -->
+  <path d="M208 230 Q220 224 232 230" stroke="#2b1419" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M268 230 Q280 224 292 230" stroke="#2b1419" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Nariz sutil -->
+  <path d="M250 252 L248 266 L254 268" stroke="#ba7d5e" stroke-width="2" stroke-linecap="round" fill="none" />
+
+  <!-- Sonrisa elegante -->
+  <path d="M234 290 Q250 305 266 290" stroke="#9e1a32" stroke-width="3.5" stroke-linecap="round" fill="none" />
+
+  <!-- Aretes dorados -->
+  <circle cx="172" cy="265" r="7" fill="url(#goldGrad)" filter="url(#goldGlow)" />
+  <circle cx="328" cy="265" r="7" fill="url(#goldGrad)" filter="url(#goldGlow)" />
+
+  <!-- Gafas modernas doradas (Developer Look) -->
+  <rect x="200" y="232" width="40" height="26" rx="7" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.9" />
+  <rect x="260" y="232" width="40" height="26" rx="7" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.9" />
+  <path d="M240 242 L260 242" stroke="url(#goldGrad)" stroke-width="2" />
+  <path d="M188 240 L200 242" stroke="url(#goldGrad)" stroke-width="2" />
+  <path d="M300 242 L312 240" stroke="url(#goldGrad)" stroke-width="2" />
+
+  <!-- Insignia Tecnológica de Código en la esquina -->
+  <g transform="translate(370, 400)">
+    <circle cx="35" cy="35" r="35" fill="#380710" stroke="url(#goldGrad)" stroke-width="2" filter="url(#goldGlow)" />
+    <text x="35" y="44" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="url(#goldGrad)" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+
+  <!-- Monograma GR sutil -->
+  <g transform="translate(60, 400)">
+    <circle cx="35" cy="35" r="35" fill="#380710" stroke="url(#goldGrad)" stroke-width="2" />
+    <text x="35" y="43" font-family="'Cinzel', serif" font-size="20" font-weight="900" fill="url(#goldGrad)" text-anchor="middle">GR</text>
+  </g>
+</svg>
